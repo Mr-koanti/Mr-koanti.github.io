@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f9484a;
+    background-image:url(back.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    font-family: 'Bitter', serif;
+    margin: 0;
+    min-height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.continer{
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px rgba(70, 70, 70, 0.1);
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    display:block;
+    text-align: center;
+    
+  
+}
+h2{ 
+ margin-top: 1rem;
+display: block;
+font-weight: 800;
+
+}
+input{
+    margin: 1.5rem;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 8px;
+}
+button{
+    border: none;
+    color: #fffcff;
+    margin-top: 4rem;
+    width: 100px;
+    height: 30px;
+    background-color: #fbd72b;
+    border-radius: 10px;  
+}
+button:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+div:hover{
+    background-color: #88685c;
+    background-image: linear-gradient(315deg, #9e5d21 0%, #eb6b9d 74%);
+    background-image: url();
+    
+color: rgb(255, 255, 255);
+    
+}
+.mail{
+    margin-right: 1.9rem;
+    
+}
+
+aside{ font-size: 30px;
+    color:rgb(255, 255, 255);
+    text-align: left;
+    width: 30%;
+    margin-bottom: 400px;
+    margin-right: 2px;
+    padding: 0;
+
+}
+p{
+    font-size: 25px;
+}
+#rem{
+    margin: 0px;
+    padding: 0px;
+}
+p:hover{
+    color:rgb(0, 0, 0);
+    font-size: 26px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+span:hover{
+    color: rgb(255, 0, 0);
+    text-transform:lowercase;
+}
