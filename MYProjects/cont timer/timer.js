@@ -4,7 +4,7 @@
  const secondsEL = document.getElementById("seconds")
 
 
-const newYears='31 Jul 2021';
+const newYears=prompt("Enter the date which you wont to caclc\n ادخل التاريخ الزي تود حسابه \n  in this  day month(in letter) year Ex : 10 jun 2025");
 function countdown(){
     const newYearsDate= new Date(newYears);
     const currentDate= new Date();

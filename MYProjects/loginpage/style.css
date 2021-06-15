@@ -66,3 +66,6 @@ label{
 .button:hover{
     background-color: blueviolet;
 }
+aside{
+    padding-top: 100px;
+}
