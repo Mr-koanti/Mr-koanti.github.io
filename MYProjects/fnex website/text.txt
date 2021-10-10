@@ -1,0 +1,73 @@
+ <h2>Upload image Of the patient's examination</h2>
+<!-- Upload  -->
+
+<div class="container">
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Patient Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Patient Name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="dname">doctor Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="dname" name="doctorname" placeholder="doctor name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="dname"> Upload image Of the patient's examination:</label>
+      </div>
+      <div class="col-75">
+        <p>Click on the "Choose File" button to upload a file:</p>
+        <input type="file" id="myFile" name="filename">
+  
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">chronic diseases</label>
+      </div>
+      <div class="col-75">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> no chronic diseases</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> diabetic</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> hematopiesis</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Report</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="  تقرير عن المريض  " style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+  ---------------------------------------------------
+
+  <form action="">
+                <input type="email" placeholder="E-mail Address">
+                <input type="password" placeholder="Password">
+      
+                <div class="remember-form">
+                  <input type="checkbox">
+                  <span>Remember me</span>
+                </div>
+                <div class="forget-pass">
+                  <a href="#">Forgot Password ?</a>
+                </div>
+      
+                <button type="submit">LOG-IN</button>
+      
+              </form>

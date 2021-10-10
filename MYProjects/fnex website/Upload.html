@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload</title>
+  <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+  <div class="parent clearfix">
+    <div class="bg-illustration">
+      <img src="fnex.png" alt="logo">
+  
+      <div class="burger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+    </div>
+  
+    <div class="login">
+      <div class="container">
+  
+        <div class="upload-form ">
+          <h2>Upload image and report Of the patient's examination</h2>
+          <!-- Upload  -->
+          
+          <div class="container">
+            <form action="action_page.php">
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Patient Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="Patient Name..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="dname">Hospital or Center Name:</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="dname" name="doctorname" placeholder=" ..">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="dname">Age:</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="pname" name="doctorname" placeholder="Age..">
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="dname">Gender:</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="radio" id="html" name="fav_language" value="male">
+                    <label for="html">male</label>
+                    <input type="radio" id="css" name="fav_language" value="female">
+                    <label for="css">female</label><br>
+                  </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="dname">phone number:</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="pname" name="doctorname" placeholder="phone number..">
+                </div>
+              
+              <div class="row">
+                <div class="col-25">
+                </div>
+                <div class="col-75">
+                  <div class="wrapper">
+                    <header>Upload image Of the patient's examination</header>
+                    <form action="#">
+                      <input class="file-input" type="file" name="file" >
+                      <i class="fas fa-cloud-upload-alt"></i>
+                      <p>Browse File to Upload</p>
+                    </form>
+                    <section class="progress-area"></section>
+                    <section class="uploaded-area"></section>
+                  </div>
+            
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="country">chronic diseases</label>
+                </div>
+                <div class="col-75">
+                  <input type="checkbox" id="no chronic diseases" name="no chronic diseases" value="no chronic diseases">
+                  <label for="vehicle1"> no chronic diseases</label><br>
+                  <input type="checkbox" id="diabetic" name="diabetic" value="diabetic">
+                  <label for="vehicle2"> diabetic</label><br>
+                  <input type="checkbox" id="hematopiesis" name="hematopiesis" value="hematopiesis">
+                  <label for="vehicle3"> hematopiesis</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Report</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="subject" name="subject" placeholder="  تقرير عن المريض  " style="height:200px"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+<script src="upload.js"></script>
+</body>
+</html>
