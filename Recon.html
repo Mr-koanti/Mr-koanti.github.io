@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>methodology</title>  
+    <link rel="stylesheet" href="styles.css">
+<script src="target.js"></script>
+</head>
+<body style="background-color: rgb(255, 255, 255);" >
+    <div class="navbar">
+            <a href="https://www.shodan.io" target="_blank">shodan_search</a>
+            <a href="https://dorks.faisalahmed.me/"target="_blank">google_Dorks</a>
+            <a href="https://github.com/search?q="target="_blank">github Dorks</a>
+            <a href="https://search.censys.io/?q="target="_blank">censys</a>
+            <a href="https://securitytrails.com/" target="_blank">securitytrails</a>
+            <a href="https://twitter.com/search?q=%23bugbountytips&src=typeahead_click&f=top" target="_blank"> twitter tips</a>
+            <a href="https://codingo.io/tools/ffuf/bounty/2020/09/17/everything-you-need-to-know-about-ffuf.html" target="_blank">all about FUFF</a>
+            <a href="https://orwaatyat.medium.com/your-full-map-to-github-recon-and-leaks-exposure-860c37ca2c82" target="_blank">github_leaks</a>
+            <a href="http://pingb.in">ssrf_test</a>
+    </div>
+
+    <div class="main">  
+        <div id="myDIV" class="header mt-5">
+            <h2 style="margin:5px">My Target</h2> <input type="text" id="myInput" placeholder="attack..."> <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        <ul id="myUL"> </ul>
+    </div>  
+    <caption>
+        <h1 style=" color: rgb(250, 250, 250);">Osint & Logic and Dorks</h1>
+        <div id="checklist">
+            <input id="010" type="checkbox" name="r" value="10" checked>
+            <label for="010">google_dork </label>
+            <input id="011" type="checkbox" name="r" value="11">
+            <label for="011">github_dorks</label>
+            <input id="012" type="checkbox" name="r" value="12">
+            <label for="012">shodan_search</label>
+            <input id="013" type="checkbox" name="r" value="13">
+            <label for="013">did you create accounts and try to break some logic & IDOR? </label>
+        </div>
+        <h1 style=" color: rgb(250, 250, 250);">Recon</h1>
+            <h2>1- get wildcard in file=>> wildcard.txt</h2>
+                <label for="">A-subdomain enmuration</label>
+                <div id="checklist">
+                    <input id="01" type="checkbox" name="r" value="1" checked>
+                    <label for="01">koactive.sh </label>
+                    <input id="02" type="checkbox" name="r" value="2">
+                    <label for="02">Sub-Drill.sh</label>
+                    <input id="03" type="checkbox" name="r" value="3">
+                    <label for="03">Securty Trails</label>
+                    <input id="04" type="checkbox" name="r" value="4">
+                    <label for="04">sublis3er+subfinder+assetfindedr+amass+knockpy</label>
+                </div>
+                
+                 
+            <div id="checklist" style="height: 10px; font-size: 20px;">
+                <input id="014" type="checkbox" name="r" value="14" checked>
+                <label for="014 "> check subdomain takeover by hostile or SubOver or subjack</label> </div><br>
+                <code></code>
+            <h3>=======================================</h3>
+
+            <label for="">B-subdomain filltering and sorting get unique domians</label> 
+            <div id="checklist" style="height: 10px;">
+                <input id="05" type="checkbox" name="r" value="5" checked>
+                <label for="05">alive domains: </label>
+    </div>
+    
+        1-httprobe:
+        <code> cat domains | httprobe -c 80 -prefer-https | anew hosts</code>
+        
+        2-httpx: 
+        <code>cat domains | httprobe -c 80 -prefer-https | anew hosts </code> 
+            3-with status code and contetnt len: 
+        <code>cat subdomains.txt | httpx -sc -cl -ports 80,8080,8448,433,21,445,3306,1433,3389,22 | anew hosts </code>
+        4-filltering:
+        <code>cat hosts | cut -d "[" -f 1 | anew alive domains</code>
+            -the 200 pages: 
+        <code>cat hosts |grep 200 | cut -d "[" -f 1 | anew alive domains  </code>
+        <h3>=======================================</h3> <br>
+        <h2>2-port scanning and Vuln:</h2>
+        <div id="checklist" style="height: 10px;">
+            <input id="07" type="checkbox" name="r" value="7" checked>
+            <label for="07"> port scanning</label> </div>
+        A-normal nmap scan:
+        <code>nmap -sV -il subdomains.txt  |  anew openports.txt</code>
+        B-vuln scanning 
+        <code>nmap -iL subdomain --script vuln | anew vuln-nmap.txt</code>
+        <div id="checklist" style="height: 10px;">
+            <input id="09" type="checkbox" name="r" value="9" checked>
+            <label for="09"> nuclei scan:</label> </div>
+        C-nuclie scan:
+        <code>nuclei -l livsub.txt | anew nuctest.txt 
+        </code>
+        <h3>=======================================</h3> <br>
+            <h2>3-content discovery:</h2>
+            <div id="checklist" style="height: 10px; font-size: 20px;">
+                <input id="08" type="checkbox" name="r" value="8" checked>
+                <label for="08"> content discovery</label> </div>
+            A-Waybackurls machine and gau:
+            -waybackurls
+            <code>cat live_subs.txt | waybackurls | anew live_urls.txt</code>
+            -gau:
+            <code>cat domains.txt | gau --threads 5</code>
+            sorting and extract unique:
+            B-link and js file finding:
+            <code>gospider -S alive.txt | anew links.txt <br>
+                gau --blacklist png,jpg,gifv ==> list of extensions to skip</code>
+            <p> C-parameter finding:</p> <br><br> <br>
+            <p> C1-paramspider:</p>
+            <code>for URL in $(&lt;active.txt); do  (python3 paramspider.py  -d "${URL}"  ); done </code>
+            <br>
+            <p>parameter classification</p>
+            <code>using gf tools to extracting vulnrable patterns from Wayback & paramspider: then do: <br>
+                1-xss automation: <br>
+                cat xxspatern.txt | kxss <br>
+                dalfox file urls_file --custom-payload Desktop/wordlists/xss.txt <br>
+                using parameter  for search for: <br>
+                -lfi  <br>
+                -ssrf <br>
+                -sqli <br>  
+            </code>
+            <h3>To Do:by qseplace</h3>
+            <div id="checklist">
+                <input id="016" type="checkbox" name="r" value="16" checked>
+                <label for="016">Blindxss.sh </label>
+                <input id="017" type="checkbox" name="r" value="17">
+                <label for="017">sqlscan.sh</label>
+                <input id="018" type="checkbox" name="r" value="18">
+                <label for="018">cleanData.sh</label>
+                <input id="019" type="checkbox" name="r" value="19">
+                <label for="019">ssrfScan</label>
+            </div>
+            <p>JS File analasys</p>
+            <code>By take them to burp scannser and search for credeintals and tokens</code>
+
+            <h3>The last checklist:</h3>
+            <div id="checklist">
+            <input id="020" type="checkbox" name="r" value="20">
+            <label for="020">Host Header injection</label>
+            <input id="022" type="checkbox" name="r" value="22">
+            <label for="022">CSRF</label>
+            <input id="023" type="checkbox" name="r" value="23">
+            <label for="023">spf-no rate limit</label>
+            <input id="024" type="checkbox" name="r" value="24">
+            <label for="024">CORS in sensitve areas</label>
+            <input id="025" type="checkbox" name="r" value="25">
+            <label for="025">XXE</label>
+            </div>
+    </caption>
+    <footer>
+        <p>Author: MR_K0ANTI <br>
+        <a href="https://twitter.com/koantinometa" target="_blank">Me at twitter</a></p>
+      </footer>
+
+    </body>
+</html>
