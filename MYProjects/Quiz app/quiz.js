@@ -8,7 +8,7 @@ const quizData=[
         correct :'d'     
             
     },
-    { question: ' what is brain of comuter',
+    { question: ' what is brain of comupter',
     a:'Ram',
     b:'Hard disk',
     c:'CPU', 
@@ -16,7 +16,7 @@ const quizData=[
     correct :'c'   
         
     },
-    { question: 'what is html',
+    { question: 'what is html stand for?',
     a:'HyperText MarkUp language',
     b:'programming language',
     c:'styleing language', 
@@ -24,19 +24,19 @@ const quizData=[
     correct :'a'   
         
     },
-    { question: ' Who is abd ALlah Hamadok',
-    a:'the Presedent',
-    b:'المؤسس',
-    c:'noop boy', 
-    d:'peace of shit',
+    { question: ' Who am I',
+    a:'محبوب الجماهير',
+    b:'شخص ذكي',
+    c:'هكرت قلبك', 
+    d:'لا شئ مما سبق',
     correct :'c'   
         
     },
-    { question: '? الكهربا البتقطع 5 م بتجي كم',
-    a:'8 مساء',
-    b:'الساعه حداشر',
-    c:'الساعة 9', 
-    d:'قاعدين ينسونا ',
+    { question: '? بحب شنو',
+    a:'البرمجة',
+    b:'الانمي',
+    c:'الاكل', 
+    d:'كل ما ذكر صحيح ',
     correct :'d'   
         
     }
