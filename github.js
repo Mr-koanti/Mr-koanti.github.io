@@ -60,6 +60,7 @@ switch(type)
         break;
     case 17.1:
         url += '.env';
+	break;
 	case 18:
         url += '.exs' ;
         break;
@@ -92,6 +93,7 @@ switch(type)
         break;
     case 28:
         url +=  'filename:config irc_pass' ;
+	break;
     case 29:
         url +=  'filename:config.php dbpasswd' ;
         break; 
@@ -184,7 +186,7 @@ switch(type)
         break;
     case 59:
         url +=  'rds.amazonaws.com password' ;
-
+	break;
     case 60:
         url +=  's3cfg' ;
         break;       
