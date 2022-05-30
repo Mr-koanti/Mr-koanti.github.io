@@ -8,35 +8,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>welcome to ieee</h2>
-    <div>
-        <div class="contianer">
-            <h3>register in our communitty </h3>
-        <form action="index.html" method="POST">
-
-            <label for="text">name:</label>
-            <input type="text" class="singup"> 
-            <br>
-
-            <label for="email">Email:</label>
-            <input type="email" class="singup">
-           <br>
-            <label for="number">Email:</label>
-            <input type="number" class="singup">
-           <br>
-            <label for="password">Password:</label>
-            <input type="password" class="singup">
-            <br>
-
-            <label for="password">Confirm Password:</label>
-            <input type="password" class="singup">
-            <br>
-            <label for="">Date of birth:</label>
-            <input type="date">
-            <br>
-            <input type="submit" class="button"  value='Sign up'class="singup">
-        </form>
-    </div>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login">
+                    <h2>Welcome to IEEE</h2>
+                    <h3>become a member?</h3>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <label for="">user name</label>
+                        <input type="text" class="login__input" placeholder="..">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <label for="">Email</label><br> 
+                        <input type="email" class="login__input" placeholder="Email">
+                        <input type="number" class="login__input" placeholder="+249">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <label for="">Password</label> 
+                        <input type="password" class="login__input" placeholder="Password">
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button__text">Signup  Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>
+                <div class="social-login">
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
     </div>
 </body>
 </html>
