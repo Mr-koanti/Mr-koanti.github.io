@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- For google Sign in button -->
+    <link href="8x8%20Login_files/css_002.css" rel="stylesheet" type="text/css">
+    <link href="8x8%20Login_files/css.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="8x8%20Login_files/font-awesome.min-feda974a77ea5783b8be673f142b7c88.css">
+    <link rel="stylesheet" href="8x8%20Login_files/bootstrap-8d398c47ea5957efd8bd86687bc98459.css">
+    <link rel="stylesheet" href="8x8%20Login_files/sso-511fe0a4b5626492720cc5856be04c47.css">
+    <link rel="stylesheet" href="8x8%20Login_files/icons-34a79695e29af8ccc3c8a9be42b79cd7.css">
+
+    <title>8x8 Login</title>
+    <link rel="shortcut icon" type="image/png" href="https://sso.8x8.com/v2/images/favicon-a7ca4628144a5a3eefa2c7b826ec6ba0.ico">
+    <style>
+        body {
+            background: url(/v2/images/vom-graphic@2x-24f0a29d854e012647d2e92e5b44d2ef.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        @media only screen and (any-hover: none) {
+            body {
+                background: none;
+            }
+        }
+    </style>
+    <script type="text/javascript" async="" src="8x8%20Login_files/analytics.min.js"></script><script>
+        /*<![CDATA[*/
+        const messages = {};
+        messages['_8x8.login.errors.internalServerErrorContact8x8Admin'] = "Internal Server Error: Please contact your 8x8 system administrator.";
+        messages['_8x8.login.errors.internalServerError'] = "Internal Server Error";
+        messages['_8x8.login.errors.wentwrong'] = "Something went wrong.";
+        messages['_8x8.login.errors.toomanyloginhelprequests'] = "Too many requests. Please try again later.";
+        /*]]>*/
+    </script>
+
+    <!-- utilities used to make life easier when avoiding modern JS that doesn't work in IE11 -->
+    <script type="text/javascript" src="8x8%20Login_files/compat-2d26ae50da9a98d174ee790a04c55af1.js"></script>
+    <!-- analytics -->
+    <script type="text/javascript" src="8x8%20Login_files/os-0583820ed8c2f122b4f687eaccbe2c47.js"></script>
+    <script>
+        /*<![CDATA[*/
+        let analyticsUrl = "https:\/\/cloud8.8x8.com\/analytics-service\/public\/";
+        let analyticsUrlJS = analyticsUrl + "analytics.js/v1/";
+        let writekey = "GPQKoigfQ8amXDjluWdb1vYtG3zgrw8X";
+        !function () {
+            var analytics = window.analytics = window.analytics || [];
+            if (!analytics.initialize) {
+                if (analytics.invoked) {
+                    window.console && console.error && console.error("Segment snippet included twice.");
+                }
+                else {
+                    analytics.invoked = !0;
+                    analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"];
+                    analytics.factory = function (t) {
+                        return function () {
+                            var e = Array.prototype.slice.call(arguments);
+                            e.unshift(t);
+                            analytics.push(e);
+                            return analytics
+                        }
+                    };
+                    for (var t = 0; t < analytics.methods.length; t++) {
+                        var e = analytics.methods[t];
+                        analytics[e] = analytics.factory(e)
+                    }
+                    analytics.load = function (t, e) {
+                        var n = document.createElement("script");
+                        n.type = "text/javascript";
+                        n.async = !0;
+                        n.src = analyticsUrlJS + t + "/analytics.min.js";
+                        var a = document.getElementsByTagName("script")[0];
+                        a.parentNode.insertBefore(n, a);
+                        analytics._loadOptions = e
+                    };
+                    analytics.SNIPPET_VERSION = "4.13.2";
+                    analytics.load(writekey);
+                    
+                }
+            }
+        }();
+        /*]]>*/
+    </script>
+
+    <script>
+        analytics.ready(function() {
+            
+            let anonymousId = null;
+            let pageName = "login_page_id";
+            if (anonymousId) {
+                analytics.setAnonymousId(anonymousId)
+            }
+
+            analytics.page(pageName, {}, {
+                context: {
+                    os: getOS()
+                }
+            });
+        });
+    </script>
+    <!--  -->
+</head>
+<body>
+<div class="main d-flex justify-content-center vertical-center">
+    <div class="box login card d-flex flex-column">
+        <form id="login" name="login" action="/v2/login/options" method="POST">
+            <input type="hidden" name="curl" value="https://sso.8x8.com/v2/">
+            <input type="hidden" name="cuh" value="a21ccc22a7">
+            <input id="iframeRequest" name="iframeRequest" type="hidden" value="false">
+            <input id="segmentAnonymousId" name="segmentAnonymousId" type="hidden" value="74238f58-7828-4e99-8921-b0fdd82d229f">
+            <div class="d-flex flex-column">
+                <div>
+            <div class="logo form-group justify-content-center d-flex">
+                <div class="companyLogo">
+                    <img src="8x8%20Login_files/logo-7f13fefba6743eaf1b03af41be2f8e72.svg">
+                </div>
+            </div>
+        </div>
+                
+                <div class=" flex-grow-1">
+                    <div class="form-group">
+                        <div class="d-flex flex-row justify-content-between">
+                            <label for="loginId">Username / Email</label>
+                            <span>
+                            <a class="" href="https://sso.8x8.com/v2/forgot/loginid" tabindex="-1">Forgot?</a>
+                        </span>
+                        </div>
+                        <input id="loginId" autocomplete="username" autofocus="" type="text" class="form-control" name="loginId" size="40">
+                        <input autofocus="" type="password" id="password" name="password" autocomplete="password" class="hide">
+                        <div class="input-group">
+                            <span id="requiredMsg" class="error hidden">Username is required.</span>
+                        </div>
+                        <div>
+            
+        </div>
+                    </div>
+
+                    <div>
+            
+            <div id="loginProgress" class="hide login-progress progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuemin="0" aria-valuenow="100" aria-valuemax="100">Continue</div>
+            </div>
+        </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="submitBtn" class="btn btn-primary btn-login" disabled="disabled"><span>Continue</span></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="d-flex justify-content-center terms">
+            <span class="small">By continuing you agree to <a target="_blank" href="https://www.8x8.com/terms-and-conditions">8x8 terms and conditions</a></span>
+        </div>
+    </div>
+</div>
+<script type="application/javascript" src="8x8%20Login_files/login.options-331f52ed43d06b65751d76e5ebad7b14.js"></script>
+<script type="application/javascript" src="8x8%20Login_files/formDisabler-59382ca574e7d02f47ececf24ce8c218.js"></script>
+<script type="application/javascript" src="8x8%20Login_files/closer-2ee3d9f7f2e0a707d42c2535230a3652.js"></script>
+
+
+</body></html>

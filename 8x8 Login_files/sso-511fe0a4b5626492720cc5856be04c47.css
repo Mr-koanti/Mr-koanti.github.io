@@ -1,0 +1,380 @@
+/**
+ * Styles for login pages
+ */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/v2/fonts/OpenSans-Regular-d7d5d4588a9f50c99264bc12e4892a7c.ttf?v=1.0') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/v2/fonts/Nunito-Regular-65bb0a158ee1967292ee4d11079d45ae.ttf?v=1.0') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'himalayan';
+    src: url('/v2/fonts/himalayan-e37ae59f92641979f4e86cefb904ad66.eot?v=1.8');
+    src: url('/v2/fonts/himalayan-e37ae59f92641979f4e86cefb904ad66.eot?v=1.8') format('embedded-opentype'),
+    url('/v2/fonts/himalayan-38cf339976b96518d07a951cc6cbdd28.ttf?v=1.8') format('truetype'),
+    url('/v2/fonts/himalayan-d0f0816c11411a57e7caa71d63b539c0.woff?v=1.8') format('woff'),
+    url('/v2/fonts/himalayan-91688d1ae719188f3d8e9d333f72d98d.svg?v=1.8') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: Nunito, "Open Sans", himalayan, sans-serif;
+    font-size: 15px;
+    letter-spacing: normal;
+    color: #1c2025;
+    font-weight: normal;
+}
+
+.hide {
+    display: none !important;
+}
+
+.vertical-center {
+    /*min-height: 100vh;*/
+    height: 100vh;
+    align-items: center;
+}
+
+
+.icon-user:before {
+    content: "\e96d";
+}
+
+.icon-question-circle:before {
+    color: #478fca !important;
+    content: "\e92f";
+    padding-right: 5px;
+}
+
+.terms {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #2087e1;
+    border-color: #2087e1;
+}
+
+.btn-primary:disabled {
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.btn-login {
+    width: 100%;
+}
+
+.btn-login.secondary {
+    background-color: #f0f3f7;
+    color: #1c2025;
+}
+
+span.secondary-url {
+    padding: 10px 0;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.secondary-instruction {
+    padding: 5px 0;
+}
+
+.secondary-instruction > span  {
+    text-align: center;
+}
+
+.secondary-instruction.error {
+    margin-bottom: 10px;
+}
+
+/*.btn-login.secondary:hover, .btn-login.secondary:active, .btn-login.secondary:focus, .btn-login.secondary:focus-visible {*/
+/*    text-decoration: none !important;*/
+/*    background-color: #f0f3f7;*/
+/*    color: #1c2025;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*}*/
+
+.secondary-code {
+    font-family: Roboto Mono;
+    font-size: 1.5rem;
+}
+
+.btn-login-saml {
+    border-color: #007bff;
+    border-width: 2px;
+    padding: 10px 12px;
+    width: 100%;
+}
+
+.btn-login-saml div.icon {
+    padding: 10px;
+    border: 1px solid #007bff;
+}
+
+.btn-login-saml div.label {
+    background-color: #007bff;
+    padding: 10px 10px;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+
+.btn-google {
+    display: inline-block;
+    background: white;
+    color: #444;
+    border-radius: 5px;
+    border: thin solid #4285f4;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+}
+
+.btn-google:hover, .btn-google:focus {
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, .3);
+    box-shadow: 0 0 3px 3px rgba(66, 133, 244, .3)
+}
+
+.btn-google span.label {
+    font-family: serif;
+    font-weight: normal;
+}
+
+.btn-google span.icon {
+    background: url('/v2/google_signin_buttons/web/vector/btn_google_light_normal-16315e809022a140c93a5507d846649e.svg') transparent 0px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+}
+
+.btn-google span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #4285f4;
+    color: #fff;
+    font-size: 16px;
+    line-height: 48px;
+    font-weight: bold;
+/* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', 'Nunito', sans-serif;
+    padding: 0 15px;
+}
+
+.login-progress {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: 38px;
+}
+
+.login-progress .progress-bar {
+    width: 100%;
+    padding: 6px 12px;
+    background-color: #2087e1;
+}
+
+
+.box {
+    width: 375px;
+    height: 469px;
+    background-color: white;
+}
+
+.box.secondary {
+    height: auto;
+}
+
+
+.set-pass-box {
+    width: 375px;
+    /*min-height: 469px;*/
+    background-color: white;
+}
+
+.success {
+    margin-bottom: 15px;
+    color: #31b76a;
+}
+
+.failure {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #eb5b58;
+}
+
+.login {
+    padding: 56px 40px 30px 40px;
+}
+
+.exception {
+    padding: 30px 15px;
+}
+
+.exception-box {
+    max-width: 40%;
+    background-color: white;
+}
+
+.exception div table tr td:first-child {
+    font-weight: 800;
+    padding-right: 10px;
+}
+
+.instruction {
+    margin: 0 30px 15px 30px;
+    text-align: center;
+}
+
+.instruction .header {
+    font-size: 18px;
+
+}
+
+
+#validationMsg, #matchMsg {
+    display: none;
+}
+
+#requirement {
+    cursor: pointer;
+    position: relative;
+}
+
+.flex-grow-1 {
+    flex: 1 1 auto;
+}
+
+#tooltip {
+    background: rgb(56,56,56) none repeat scroll 0 0;
+    color: white;
+    /*font-size: 12px;*/
+    position: absolute;
+    bottom: 15px;
+    /*left: 2px;*/
+    width: 21rem;
+    /*bottom: 17px;*/
+    z-index: 9;
+    text-align: left;
+    text-shadow: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.small {
+    font-size: 12px;
+    color: #5e6d7a;
+}
+
+.small a {
+    text-decoration: underline;
+    color: #778899;
+}
+
+.info {
+    display: flex;
+    border: 1px #c1dbff solid;
+    border-radius: 0.25rem;
+    background-color: #cfe2ff;
+    color: #084298;
+    padding: 5px;
+}
+
+
+.error {
+    display: flex;
+    border: 1px #ebccd1 solid;
+    border-radius: 0.25rem;
+    background-color: #f2dede;
+    margin-top: 0.5rem;
+    padding: 5px;
+    color: #e52920;
+}
+
+.message {
+    display: inline-block;
+    padding: 3px 3px 3px 6px;
+    flex-grow: 1;
+}
+.icon-close {
+    padding: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons > button {
+    width: 100%;
+}
+
+.buttons > :first-child {
+    margin-right: 15px;
+}
+
+.back-to-username {
+    padding: 17px 0;
+    background-color: #f0f3f7;
+    color: #1c2025;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    border: none;
+}
+
+.back-to-username:hover, .back-to-username:active, .back-to-username:focus, .back-to-username:focus-visible {
+    text-decoration: none !important;
+    background-color: #f0f3f7;
+    color: #1c2025;
+    border: none;
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.google-login {
+    background-image: url("../google_signin_buttons/web/2x/btn_google_signin_light_normal_web@2x.png");
+    line-height: 1;
+}
+
+/**
+ * This handles iframes that are narrower than our normal width
+ */
+@media only screen and (max-width: 375px) {
+    .box {
+        width: 100%;
+    }
+
+}
+
+/**
+ * This handles mobile devices
+ */
+@media only screen and (any-hover: none) {
+    .box {
+        width: 100%;
+        height: auto;
+        border: 0;
+    }
+
+    .card {
+        border: none;
+    }
+
+    div.vertical-center {
+        align-items: flex-start;
+    }
+}
