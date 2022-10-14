@@ -1,1 +1,49 @@
-<mxfile host="app.diagrams.net" modified="2022-10-14T12:43:59.111Z" agent="5.0 (Windows)" version="20.4.0" etag="B2Rb4z4JXnXTbBBlSPVR" type="github"><diagram id="4nxSMnSCEQ_CME_so-b6">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-10-14T16:30:37.372Z" agent="5.0 (Windows)" etag="8_yGSK0eLCPHPqUewm8q" version="20.4.0" type="github">
+  <diagram id="4nxSMnSCEQ_CME_so-b6" name="Page-1">
+    <mxGraphModel dx="704" dy="745" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-8" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Saxra5J9HIA35Rh_pzyu-1" target="Saxra5J9HIA35Rh_pzyu-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Saxra5J9HIA35Rh_pzyu-1" target="Saxra5J9HIA35Rh_pzyu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Saxra5J9HIA35Rh_pzyu-1" target="Saxra5J9HIA35Rh_pzyu-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Saxra5J9HIA35Rh_pzyu-1" target="Saxra5J9HIA35Rh_pzyu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Saxra5J9HIA35Rh_pzyu-1" target="Saxra5J9HIA35Rh_pzyu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="Saxra5J9HIA35Rh_pzyu-1" target="Saxra5J9HIA35Rh_pzyu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-1" value="&lt;span id=&quot;page71R_mcid68&quot; class=&quot;markedContent&quot;&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 80.1958px; top: 687.777px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt;D&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 92.5872px; top: 687.777px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt;e&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 100.332px; top: 687.777px; font-size: 15.4893px; font-family: sans-serif; transform: scaleX(0.977117);&quot;&gt;sig&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 120.468px; top: 687.777px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt;n&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 129.08px; top: 687.777px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt; &lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 134.408px; top: 687.777px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt;a&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 142.153px; top: 687.777px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt; &lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 146.838px; top: 687.777px; font-size: 15.4893px; font-family: sans-serif; transform: scaleX(1.05627);&quot;&gt;quad-copter&lt;/span&gt;&lt;br role=&quot;presentation&quot;&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 80.1958px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif; transform: scaleX(1.05173);&quot;&gt;drone&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 121.862px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt; &lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 127.051px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif; transform: scaleX(1.11643);&quot;&gt;th&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 142.192px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt;a&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 150.711px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt;t&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 155.869px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt; &lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 160.392px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif; transform: scaleX(1.08651);&quot;&gt;should&lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 209.973px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif;&quot;&gt; &lt;/span&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 215.379px; top: 705.59px; font-size: 15.4893px; font-family: sans-serif; transform: scaleX(0.938345);&quot;&gt;be&lt;/span&gt;&lt;br role=&quot;presentation&quot;&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 80.1958px; top: 723.449px; font-size: 15.4893px; font-family: sans-serif; transform: scaleX(0.946503);&quot;&gt;able to be used for&lt;/span&gt;&lt;br role=&quot;presentation&quot;&gt;&lt;span dir=&quot;ltr&quot; role=&quot;presentation&quot; style=&quot;left: 80.1958px; top: 741.261px; font-size: 15.4893px; font-family: sans-serif; transform: scaleX(0.961813);&quot;&gt;deliverer autonomously &lt;br&gt;&lt;/span&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF6666;" vertex="1" parent="1">
+          <mxGeometry x="140" y="390" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-2" value="cost objective" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="510" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="500" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Saxra5J9HIA35Rh_pzyu-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
