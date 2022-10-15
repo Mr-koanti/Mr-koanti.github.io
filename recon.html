@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>methodology</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>PENTEST-Mrk0anti</title>  
     <link rel="stylesheet" href="styles.css">
 <script src="target.js"></script>
 </head>
-<body style="background-color: rgb(255, 255, 255);" >
+<body style="background-color: rgb(15, 12, 12);" >
     <div class="navbar">
-            <a href="https://www.shodan.io" target="_blank">shodan_search</a>
+            <a href="https://mr-koanti.github.io/shodan" target="_blank">shodan_search</a>
+            <a href="https://mr-koanti.github.io/github"target="_blank">github Dorks</a>
             <a href="https://dorks.faisalahmed.me/"target="_blank">google_Dorks</a>
-            <a href="https://github.com/search?q="target="_blank">github Dorks</a>
             <a href="https://search.censys.io/?q="target="_blank">censys</a>
             <a href="https://securitytrails.com/" target="_blank">securitytrails</a>
             <a href="https://twitter.com/search?q=%23bugbountytips&src=typeahead_click&f=top" target="_blank"> twitter tips</a>
@@ -23,135 +23,320 @@
 
     <div class="main">  
         <div id="myDIV" class="header mt-5">
-            <h2 style="margin:5px">My Target</h2> <input type="text" id="myInput" placeholder="attack..."> <span onclick="newElement()" class="addBtn">Add</span>
+            <h2 style="margin:5px ; color: rgb(216, 199, 199);">Target</h2> <input type="text" id="myInput" placeholder="attack..."> <span onclick="newElement()" class="addBtn">Add</span>
         </div>
         <ul id="myUL"> </ul>
     </div>  
     <caption>
-        <h1 style=" color: rgb(250, 250, 250);">Osint & Logic and Dorks</h1>
+    <h1 style=" color: rgb(255, 255, 255); text-align: center; text-decoration: none;">Web Applications Pentest checklist ./Mr_k0anti ^_^</h1>
+        <h2>stage1 : wildcard scope (*.exampl.com)</h2>
         <div id="checklist">
-            <input id="010" type="checkbox" name="r" value="10" checked>
-            <label for="010">google_dork </label>
-            <input id="011" type="checkbox" name="r" value="11">
-            <label for="011">github_dorks</label>
-            <input id="012" type="checkbox" name="r" value="12">
-            <label for="012">shodan_search</label>
-            <input id="013" type="checkbox" name="r" value="13">
-            <label for="013">did you create accounts and try to break some logic & IDOR? </label>
+            <input id="01" type="checkbox" name="r" value="1" >
+            <label for="01">Enumarate Subdomain - passive (subfinder or Sub-Drill)</label>
+            <input id="02" type="checkbox" name="r" value="2">
+            <label for="02">Subdomain bruteforce -  active (amaas or knockpy with wordlist)</label>
+            <input id="03" type="checkbox" name="r" value="3">
+            <label for="03">Permute subdomains with gotator </label>
+            <input id="04" type="checkbox" name="r" value="4">
+            <label for="04"> check subdomain takeover (nuclie-takeover)</label>
+            <input id="05" type="checkbox" name="r" value="5">
+            <label for="05"> Check for cloud asset (cloud_enum)</label>
+            <input id="06" type="checkbox" name="r" value="8">
+            <label for="06"> get all ips from shodan and censys </label>    
+            <input id="07" type="checkbox" name="r" value="7">
+            <label for="07">Identify alive subdomains with httpx techcnologys,status,servers..etc</label>
+            <input id="08" type="checkbox" name="r" value="8">
+            <label for="08"> Take screenshots</label>
         </div>
-        <h1 style=" color: rgb(250, 250, 250);">Recon</h1>
-            <h2>1- get wildcard in file=>> wildcard.txt</h2>
-                <label for="">A-subdomain enmuration</label>
-                <div id="checklist">
-                    <input id="01" type="checkbox" name="r" value="1" checked>
-                    <label for="01">koactive.sh </label>
-                    <input id="02" type="checkbox" name="r" value="2">
-                    <label for="02">Sub-Drill.sh</label>
-                    <input id="03" type="checkbox" name="r" value="3">
-                    <label for="03">Securty Trails</label>
-                    <input id="04" type="checkbox" name="r" value="4">
-                    <label for="04">sublis3er+subfinder+assetfindedr+amass+knockpy</label>
-                </div>
-                
-                 
-            <div id="checklist" style="height: 10px; font-size: 20px;">
-                <input id="014" type="checkbox" name="r" value="14" checked>
-                <label for="014"> check subdomain takeover by hostile or SubOver or subjack</label> </div><br>
-                
-            <h3>=======================================</h3>
-
-            <label for="">B-subdomain filltering and sorting get unique domians</label> 
-            <div id="checklist" style="height: 10px;">
-                <input id="05" type="checkbox" name="r" value="5" checked>
-                <label for="05">alive domains: </label>
-    </div>
-    
-        1-httprobe:
-        <code> cat domains | httprobe -c 80 -prefer-https | anew hosts</code>
+        <br>
+        <h1></h1>
+        <h1 style=" color: rgb(250, 250, 250);"></h1>
+        <h2></h2>
+            <label for=""></label>
+    <h2>stage2: small scope</h2>
+    <div id="checklist" style="height: 10px;">
+        <input id="09" type="checkbox" name="r" value="9">
+        <label for="09">Identify web server, technologies and database and clssifiy httpx reuslts</label>
+        <input id="010" type="checkbox" name="r" value="10">
+        <label for="010">Try to locate  /robots.txt ,  /crossdomain.xml , /clientaccesspolicy.xml  , /sitemap.xml and  , /.well-known/</label>
+        <input id="011" type="checkbox" name="r" value="11">
+        <label for="011">Directory enumration (ffuf and worldlsits search for heddin dirs)</label>
+        <input id="012" type="checkbox" name="r" value="12">
+        <label for="012">Review comments on source code (Burp Engagement Tools)</label>
+        <input id="013" type="checkbox" name="r" value="13">
+        <label for="013">githubDork _leaks,apiKeys,mails,usernames,passwors,db(gitdorkgo)</label>
+        <input id="014" type="checkbox" name="r" value="14">
+        <label for="014">Identify WAF</label>
+        <input id="015" type="checkbox" name="r" value="15">
+        <label for="015">Get urls (gauplus ,waybackurls,paramspider)</label>
+        <input id="016" type="checkbox" name="r" value="16">
+        <label for="016">Automatic XSS finder (kxss ,dalfox)</label>
+        <input id="017" type="checkbox" name="r" value="17">
+        <label for="017">Locate admin and login panels</label>
+        <input id="018" type="checkbox" name="r" value="18">
+        <label for="018">Broken link hijacking(blc tool)</label>
+        <input id="019" type="checkbox" name="r" value="19">
+        <label for="019">Get all JS files(subjs,xlinkFinder))</label>
+        <input id="020" type="checkbox" name="r" value="20">
+        <label for="020">JS hardcoded APIs and secrets(nuclie-tokens)</label>
+        <input id="021" type="checkbox" name="r" value="21">
+        <label for="021">JS analysis(getJSword)</label>
+        <input id="022" type="checkbox" name="r" value="22">
+        <label for="022">Run automated scanner(nuclie)</label>
+        <input id="023" type="checkbox" name="r" value="23">
+        <label for="023">Test CORS (CORScanner,crosy) </label>
         
-        2-httpx: 
-        <code>cat domains | httprobe -c 80 -prefer-https | anew hosts </code> 
-            3-with status code and contetnt len: 
-        <code>cat subdomains.txt | httpx -sc -cl -ports 80,8080,8448,433,21,445,3306,1433,3389,22 | anew hosts </code>
-        4-filltering:
-        <code>cat hosts | cut -d "[" -f 1 | anew alive domains</code>
-            -the 200 pages: 
-        <code>cat hosts |grep 200 | cut -d "[" -f 1 | anew alive domains  </code>
-        <h3>=======================================</h3> <br>
-        <h2>2-port scanning and Vuln:</h2>
-        <div id="checklist" style="height: 10px;">
-            <input id="07" type="checkbox" name="r" value="7" checked>
-            <label for="07"> port scanning</label> </div>
-        A-normal nmap scan:
-        <code>nmap -sV -il subdomains.txt  |  anew openports.txt</code>
-        B-vuln scanning 
-        <code>nmap -iL subdomain --script vuln | anew vuln-nmap.txt</code>
-        <div id="checklist" style="height: 10px;">
-            <input id="09" type="checkbox" name="r" value="9" checked>
-            <label for="09"> nuclei scan:</label> </div>
-        C-nuclie scan:
-        <code>nuclei -l livsub.txt | anew nuctest.txt 
-        </code>
-        <h3>=======================================</h3> <br>
-            <h2>3-content discovery:</h2>
-            <div id="checklist" style="height: 10px; font-size: 20px;">
-                <input id="08" type="checkbox" name="r" value="8" checked>
-                <label for="08"> content discovery</label> </div>
-            A-Waybackurls machine and gau:
-            -waybackurls
-            <code>cat live_subs.txt | waybackurls | anew live_urls.txt</code>
-            -gau:
-            <code>cat domains.txt | gau --threads 5</code>
-            sorting and extract unique:
-            B-link and js file finding:
-            <code>gospider -S alive.txt | anew links.txt <br>
-                gau --blacklist png,jpg,gifv ==> list of extensions to skip</code>
-            <p> C-parameter finding:</p> <br><br> <br>
-            <p> C1-paramspider:</p>
-            <code>for URL in $(&lt;active.txt); do  (python3 paramspider.py  -d "${URL}"  ); done </code>
-            <br>
-            <p>parameter classification</p>
-            <code>using gf tools to extracting vulnrable patterns from Wayback & paramspider: then do: <br>
-                1-xss automation: <br>
-                cat xxspatern.txt | kxss <br>
-                dalfox file urls_file --custom-payload Desktop/wordlists/xss.txt <br>
-                using parameter  for search for: <br>
-                -lfi  <br>
-                -ssrf <br>
-                -sqli <br>  
-            </code>
-            <h3>To Do:by qseplace</h3>
-            <div id="checklist">
-                <input id="016" type="checkbox" name="r" value="16" checked>
-                <label for="016">Blindxss.sh </label>
-                <input id="017" type="checkbox" name="r" value="17">
-                <label for="017">sqlscan.sh</label>
-                <input id="018" type="checkbox" name="r" value="18">
-                <label for="018">cleanData.sh</label>
-                <input id="019" type="checkbox" name="r" value="19">
-                <label for="019">ssrfScan</label>
-            </div>
-            <p>JS File analasys</p>
-            <code>By take them to burp scannser and search for credeintals and tokens</code>
+    </div>
+    <h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1>
 
-            <h3>The last checklist:</h3>
+<h2>stage2-1:Network Scan</h2>
+    <div id="checklist" style="height: 10px;">
+        <input id="024" type="checkbox" name="r" value="24">
+        <label for="024">Open ports with (shodan smap, nmap )</label>
+        <input id="025" type="checkbox" name="r" value="25">
+        <label for="025">Check UDP ports</label>
+        <input id="026" type="checkbox" name="r" value="26">
+        <label for="026">service scan for open ports</label>
+        <input id="027" type="checkbox" name="r" value="27">
+        <label for="027">(smb,ftb,ssh,rdp)scriptscan and bruteforce</label>
+    </div>
+<h1></h1><h1></h1>
+<h2>Input handling from reuslts of crawler and gauplus ,waybackurls,paramspider  </h2>
+    <div id="checklist" style="height: 10px;">
+        <input id="028" type="checkbox" name="r" value="28">
+        <label for="028">Fuzz all request parameters (if got user, add headers to fuzzer)</label>
+        <input id="029" type="checkbox" name="r" value="29">
+        <label for="029">Identify all reflected data and try rxss</label>
+        <input id="030" type="checkbox" name="r" value="30">
+        <label for="030">HTTP headr injection in GET & POST (X Forwarded Host)</label>
+        <input id="031" type="checkbox" name="r" value="31">
+        <label for="031">RCE via Referer Header</label>
+        <input id="032" type="checkbox" name="r" value="32">
+        <label for="032">SQL injection and blind xxs via User-Agent Header xsshunter </label>
+        <input id="033" type="checkbox" name="r" value="33">
+        <label for="033">Arbitrary redirection on path ///.evil.com/ or after login</label>
+        <input id="034" type="checkbox" name="r" value="34">
+        <label for="034">Stored attacks xss in uname any stored parameters</label>
+        <input id="035" type="checkbox" name="r" value="35">
+        <label for="035">OS command injection</label>
+        <input id="036" type="checkbox" name="r" value="36">
+        <label for="036">Open ports with (shodan smap, nmap )</label>
+        <input id="037" type="checkbox" name="r" value="37">
+        <label for="037">Path Traversal rfi or lfi (fimap)</label>
+        <input id="038" type="checkbox" name="r" value="38">
+        <label for="038">Script injection (php asp)</label>
+        <input id="039" type="checkbox" name="r" value="39">
+        <label for="039">SMTP injection</label>
+        <input id="049" type="checkbox" name="r" value="49">
+        <label for="049">SOAP injection</label>
+        <input id="050" type="checkbox" name="r" value="50">
+        <label for="050">LDAP injection</label>
+        <input id="051" type="checkbox" name="r" value="51">
+        <label for="051">SSI Injection</label>
+        <input id="052" type="checkbox" name="r" value="52">
+        <label for="052">Sqli in params login injection with ' and '--+-</label>
+        <input id="053" type="checkbox" name="r" value="53">
+        <label for="053">HTTP requist Smuggling (loop all urls in smuggler.py )</label>
+        <input id="054" type="checkbox" name="r" value="54">
+        <label for="054">SSRF in previously discovered open ports (ffuf,ssrf.py)</label>
+        <input id="055" type="checkbox" name="r" value="55">
+        <label for="055">XPath injection</label>
+        <input id="040" type="checkbox" name="r" value="40">
+        <label for="040">xmlrpc.php DOS and user enumeration </label>
+        <input id="041" type="checkbox" name="r" value="41">
+        <label for="041">HTTP  methods OPTIONS ,PUT ,DELETE may lead to rce</label>
+        <input id="042" type="checkbox" name="r" value="42">
+        <label for="042">Try to discover hidden parameters(arjun)  </label>
+        <input id="043" type="checkbox" name="r" value="43">
+        <label for="043"> in any request, change content-type to text/xml</label>
+        <input id="044" type="checkbox" name="r" value="44">
+        <label for="044">test File Uploads (svg for xxs ,php,asp for rce) </label>
+        <input id="045" type="checkbox" name="r" value="45">
+        <label for="045">Test that acceptable file types are whitelisted </label>
+        <input id="046" type="checkbox" name="r" value="46">
+        <label for="046">-Test that file size limits, upload frequency and total file counts are defined and are enforced</label>
+        <input id="047" type="checkbox" name="r" value="47">
+        <label for="047">Test that file contents match the defined file type and filenames are sanitised   </label>
+        <input id="048" type="checkbox" name="r" value="48">
+        <label for="048">Test that uploaded files are not directly accessible within the web root </label>
+    
+    </div>
+<h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1> <h1></h1><h1></h1>
+<h2> Error handling</h2>
+    <div id="checklist" style="height: 10px;">
+        <input id="056" type="checkbox" name="r" value="56">
+        <label for="056">Access custom pages like /whatever_fake.php (.aspx,.html,.etc)</label>
+        <input id="057" type="checkbox" name="r" value="57">
+        <label for="057">Add multiple parameters in GET and POST request using different values</label>
+        <input id="058" type="checkbox" name="r" value="58">
+        <label for="058">Add "[]", "]]", and "[[" in cookie values and parameter values to create errors</label>
+        <input id="059" type="checkbox" name="r" value="59">
+        <label for="059"> Generate error by giving input as "/~randomthing/%s" at the end of URL</label>
+        <input id="060" type="checkbox" name="r" value="60">
+        <label for="060">Use Burp Intruder "Fuzzing Full" List in input to generate error codes</label>
+        <input id="061" type="checkbox" name="r" value="61">
+        <label for="061">Try different HTTP Verbs like PATCH, DEBUG or wrong like FAKE</label>
+
+    </div>
+<h1></h1><h1></h1><h1></h1>
+<h2>stage3 :uSer managment and Logic vulnerableties</h2>
+    <h3>1-Registration vunls:</h3>
+                <div id="checklist">
+                <input id="062" type="checkbox" name="r" value="62">
+                <label for="062">Duplicate registration (try with uppercase, spaces,+1@..., dots in name, etc)</label>
+                <input id="063" type="checkbox" name="r" value="63">
+                <label for="063">Overwrite existing user (existing user takeover)</label>
+                <input id="064" type="checkbox" name="r" value="64">
+                <label for="064">Long password (>200) leads to DoS</label>
+                <input id="065" type="checkbox" name="r" value="65">
+                <label for="065">TCorrupt authentication and session defects: Sign up, don't verify, request change password, change, check if account is active</label>
+                <input id="066" type="checkbox" name="r" value="66">
+                <label for="066">Try to re-register repeating same request with same password and different password too</label>
+                <input id="067" type="checkbox" name="r" value="67">
+                <label for="067">If JSON request, add comma {“email”:“victim@mail.com”,”hacker@mail.com”,“token”:”xxxxxxxxxx”}</label>
+                <input id="068" type="checkbox" name="r" value="68">
+                <label for="068">Lack of confirmation -> try to register with company email</label>
+                <input id="069" type="checkbox" name="r" value="69">
+                <label for="069">Check OAuth with social media registration and Check state parameter on social media registration</label>
+                <input id="070" type="checkbox" name="r" value="70">
+                <label for="070">Check redirections in register page after login</label>
+                <input id="071" type="checkbox" name="r" value="71">
+                <label for="071">Rate limit on account creation</label>
+                <input id="072" type="checkbox" name="r" value="72">
+                <label for="072">XSS on name ,email or addres or any data </label>
+                <input id="073" type="checkbox" name="r" value="73">
+                <label for="073">Email attacks XSS(&lt;script src=//xsshere?"@email.com),Template injection,SQLi,ssrf(john.doe@abc123.burpcollab)</label>
+            </div>
+            <p></p>
+            <h3></h3><h1></h1><h1></h1><h1></h1><h1></h1>
+        <h3>2-Authentication vulnerableties: </h3>
             <div id="checklist">
-            <input id="020" type="checkbox" name="r" value="20">
-            <label for="020">Host Header injection</label>
-            <input id="022" type="checkbox" name="r" value="22">
-            <label for="022">CSRF</label>
-            <input id="023" type="checkbox" name="r" value="23">
-            <label for="023">spf-no rate limit</label>
-            <input id="024" type="checkbox" name="r" value="24">
-            <label for="024">CORS in sensitve areas</label>
-            <input id="025" type="checkbox" name="r" value="25">
-            <label for="025">XXE</label>
+                <input id="074" type="checkbox" name="r" value="74">
+                <label for="074">Username enumeration</label>
+                <input id="075" type="checkbox" name="r" value="75">
+                <label for="075">Account recovery function</label>
+                <input id="076" type="checkbox" name="r" value="76">
+                <label for="076">Remember me" function</label>
+                <input id="077" type="checkbox" name="r" value="77">
+                <label for="077">Fail-open conditions</label>
+                <input id="078" type="checkbox" name="r" value="78">
+                <label for="078">Auto-complete testing</label>
+                <input id="079" type="checkbox" name="r" value="79">
+                <label for="079">Lack of password confirmation on change email, password or 2FA (try change response)</label>
+                <input id="080" type="checkbox" name="r" value="80">
+                <label for="080">Weak login function over HTTP and HTTPS if both are available</label>
+                <input id="081" type="checkbox" name="r" value="81">
+                <label for="081">User account lockout mechanism on brute force attack</label>
+                <input id="082" type="checkbox" name="r" value="82">
+                <label for="082">Check Oauth for open redirection</label>
+                <input id="083" type="checkbox" name="r" value="83">
+                <label for="083"> Test password change process</label>
+                <input id="084" type="checkbox" name="r" value="84">
+                <label for="084"> Test for logout functionality presence</label>
+                <input id="085" type="checkbox" name="r" value="85">
+                <label for="085">In OTP check guessable codes and race conditions</label>
+                <input id="086" type="checkbox" name="r" value="86">
+                <label for="086">OTP, check response manipulation for bypass</label>
+                <input id="087" type="checkbox" name="r" value="87">
+                <label for="087">OTP, try bruteforce</label>
+                <input id="088" type="checkbox" name="r" value="88">
+                <label for="088">if JWT check common flows</label>
+                <input id="089" type="checkbox" name="r" value="90">
+                <label for="089">After register, logout, clean cache, go to home page and paste your profile url in browser, check for "login?next=accounts/profile" for open redirect or XSS with "/login?next=javascript:alert(1);//"</label>
+                <input id="090" type="checkbox" name="r" value="91">
+                <label for="090">Try login with common credentials</label>
+                <input id="091" type="checkbox" name="r" value="92">
+                <label for="091">OTP, try bruteforce</label>
+
+            </div>
+        </h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1>
+            <h2>3-forget password functionality</h2>
+            <div id="checklist">
+                <input id="074" type="checkbox" name="r" value="74">
+                <label for="074">Invalidate session on Logout and Password reset</label>
+                <input id="075" type="checkbox" name="r" value="75">
+                <label for="075">Uniqueness of forget password reset link/code</label>
+                <input id="076" type="checkbox" name="r" value="76">
+                <label for="076">Remember me" function</label>
+                <input id="077" type="checkbox" name="r" value="77">
+                <label for="077">Reset links expiration time</label>
+                <input id="078" type="checkbox" name="r" value="78">
+                <label for="078">Find user id or other sensitive fields in reset link and tamper them</label>
+                <input id="079" type="checkbox" name="r" value="79">
+                <label for="079">Request 2 reset passwords links and use the older</label>
+                <input id="080" type="checkbox" name="r" value="80">
+                <label for="080">Check if many requests have sequential tokens</label>
+                <input id="081" type="checkbox" name="r" value="81">
+                <label for="081">Use username@burp_collab.net and analyze the callback</label>
+                <input id="082" type="checkbox" name="r" value="82">
+                <label for="082">Host header injection for token leakage</label>
+                <input id="083" type="checkbox" name="r" value="83">
+                <label for="083"> Add X-Forwarded-Host: evil.com to receive the reset link with evil.com</label>
+                <input id="084" type="checkbox" name="r" value="84">
+                <label for="084"> Email crafting like victim@gmail.com@target.com</label>
+                <input id="085" type="checkbox" name="r" value="85">
+                <label for="085">User carbon copy email=victim@mail.com%0a%0dcc:hacker@mail.com</label>
+                <input id="086" type="checkbox" name="r" value="86">
+                <label for="086">No rate limit, capture request and send over 1000 times</label>
+                <input id="087" type="checkbox" name="r" value="87">
+                <label for="087">Check encryption in reset password token</label>
+                <input id="088" type="checkbox" name="r" value="88">
+                <label for="088">Token leak in referer header</label>
+                <input id="089" type="checkbox" name="r" value="90">
+                <label for="089">After register, logout, clean cache, go to home page and paste your profile url in browser, check for "login?next=accounts/profile" for open redirect or XSS with "/login?next=javascript:alert(1);//"</label>
+                <input id="090" type="checkbox" name="r" value="91">
+                <label for="090">Try login with common credentials</label>
+                <input id="091" type="checkbox" name="r" value="92">
+                <label for="091">OTP, try bruteforce</label>
+            </div>
+        </h1><h1></h1><h1></h1><h1></h1></h1><h1></h1><h1></h1><h1></h1>
+           <h2> Profile/Account details </h2>
+           <div id="checklist">
+            <input id="092" type="checkbox" name="r" value="92">
+            <label for="092">Find parameter with user id and try to tamper in order to get the details of other users</label>
+            <input id="093" type="checkbox" name="r" value="93">
+            <label for="093">Create a list of features that are pertaining to a user account only and try CSRF</label>
+            <input id="094" type="checkbox" name="r" value="94">
+            <label for="094">Change email id and update with any existing email id. Check if its getting validated on server or not</label>
+            <input id="095" type="checkbox" name="r" value="95">
+            <label for="095">Reset links expiration time</label>
+            <input id="096" type="checkbox" name="r" value="96">
+            <label for="096">Check any new email confirmation link and what if user doesn't confirm.</label>
+            <input id="097" type="checkbox" name="r" value="97">
+            <label for="097">File upload No Size Limit, File extension, Filter Bypass (burp uploaderextension,) RCE :)</label>
+            <input id="098" type="checkbox" name="r" value="98">
+            <label for="098">CSV import/export: Command Injection, XSS, macro injections</label>
+            <input id="099" type="checkbox" name="r" value="99">
+            <label for="099">Check profile picture URL and find email id/user info or exif data</label>
+            <input id="0100" type="checkbox" name="r" value="100">
+            <label for="0100">Imagetragick in picture profile upload</label>
+            <input id="0102" type="checkbox" name="r" value="101">
+            <label for="0102"> Account deletion option and try to reactivate with "Forgot password" feature</label>
+            <input id="0103" type="checkbox" name="r" value="102">
+            <label for="0103"> Email crafting like victim@gmail.com@target.com</label>
+            <input id="0104" type="checkbox" name="r" value="103">
+            <label for="0104">User carbon copy email=victim@mail.com%0a%0dcc:hacker@mail.com</label>
+            <input id="0105" type="checkbox" name="r" value="104">
+            <label for="0105">Try bruteforce enumeration when change any user unique parameter.</label>
+            <input id="0106" type="checkbox" name="r" value="105">
+            <label for="0106">Check encryption in reset password token</label>
+            <input id="0107" type="checkbox" name="r" value="106">
+            <label for="0107">Token leak in referer header</label>
+            <input id="0108" type="checkbox" name="r" value="107">
+            <label for="0108">After register, logout, clean cache, go to home page and paste your profile url in browser, check for "login?next=accounts/profile" for open redirect or XSS with "/login?next=javascript:alert(1);//"</label>
+            <input id="0109" type="checkbox" name="r" value="108">
+            <label for="0109">Try login with common credentials</label>
+            <input id="0110" type="checkbox" name="r" value="109">
+            <label for="0110">stored xss,profile photo</label>
             </div>
     </caption>
+<br>
+            <h1></h1><h1></h1><h1></h1><h1></h1>
+            <h1 style=" color: rgb(250, 250, 250);"></h1>
+            <h2></h2>
     <footer>
-        <p>Author: MR_K0ANTI <br>
-        <a href="https://twitter.com/koantinometa" target="_blank">Me at twitter</a></p>
-      </footer>
-
+            <p>Author: MR_K0ANTI <br>
+            <a href="https://twitter.com/koantinometa" target="_blank"><img style="height: 40px;" class="twtr" src="twtr.png" alt=""></a></p>
+    </footer>
     </body>
 </html>
