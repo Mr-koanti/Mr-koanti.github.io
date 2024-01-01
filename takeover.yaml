@@ -27,7 +27,7 @@ info:
 host: md3bcylezp1qjv581mva1sfnsey5m2ar.oastify.com
 paths:
   /{username}{password}:
-get:
+    post:
       summary: Logs in
       parameters:
         - name: Username 
