@@ -30,13 +30,13 @@ paths:
     post:
       parameters:
       -name: username
-       required: true
-       in: path
-       type: string
+      required: true
+      in: path
+      type: string
       -name: password
-        in: path
-        type: string
-        required: true
+      in: path
+      type: string
+      required: true
       responses:
         '200':
           description: Login successful
