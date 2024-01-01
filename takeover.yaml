@@ -26,18 +26,17 @@ info:
 </div>'
 host: md3bcylezp1qjv581mva1sfnsey5m2ar.oastify.com
 paths:
-  /{username}/{password}:
+  /{username}{password}:
     post:
-      summary: Logs in
       parameters:
-        - name: username
-          in: path
-          type: string
-          required: true
-        - name: password
-          in: path
-          type: string
-          required: true
+      -name: username
+       required: true
+       in: path
+       type: string
+      -name: password
+        in: path
+        type: string
+        required: true
       responses:
         '200':
-          description: Login was successful
+          description: Login successful
