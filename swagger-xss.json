@@ -2,8 +2,8 @@
   "swagger" : "2.0",
   "info" : {
     "version" : "1.0.100",
-    "title" : "title<script language=\"javascript\">alert('1')</script>",
-    "description" : "description with **markdown** format <script language=\"javascript\">alert('script-in-description')</script> <img src=x onerror=alert(\"img-in-description\")>"
+    "title" : "title{{4*5}}{{7*7}}${7*7}<%= 7*7 %>${{7*7}}#{7*7}*{7*7}",
+    "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>"
   },
   "tags" : [ {
     "name" : "Admin",
@@ -15,7 +15,7 @@
   "paths" : {
     "/test" : {
       "get" : {
-        "description" : "description with **markdown** format",
+        "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>",
         "summary" : "a summary with **markdown** format",
         "responses" : {
           "200" : {
