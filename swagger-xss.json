@@ -7,10 +7,10 @@
   },
   "tags" : [ {
     "name" : "Admin",
-    "description" : "tag with **markdown**"
+    "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>"
   }, {
-    "name" : "Xss<script language=\"javascript\">alert('3')</script>",
-    "description" : "tag with **markdown**<script language=\"javascript\">alert('4')</script>"
+    "name" : "Xss>",
+    "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>"
   } ],
   "paths" : {
     "/test" : {
@@ -39,7 +39,7 @@
         }
       },
       "post" : {
-        "description" : "<script language=\"javascript\">alert('5')</script>",
+        "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>",
         "summary" : "<script language=\"javascript\">alert('6')</script>",
         "consumes" : [ "<script language=\"javascript\">alert('7')</script>" ],
         "produces" : [ "<script language=\"javascript\">alert('8')</script>" ],
@@ -55,7 +55,7 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "nothing<script language=\"javascript\">alert('10')</script>",
+            "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>",
             "schema" : {
               "$ref" : "#/definitions/XSSPayloadScript"
             }
@@ -66,10 +66,10 @@
   },
   "definitions" : {
     "User" : {
-      "description" : "also with **markdown**",
+      "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>",
       "properties" : {
         "name" : {
-          "description" : "prop with **markdown**",
+          "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>",
           "type" : "string"
         },
         "email" : {
@@ -78,7 +78,7 @@
       }
     },
     "Email" : {
-      "description" : "<script language=\"javascript\">alert('11')</script>",
+      "description" : "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id='</textarea><img onerror=alert(1) src=1>'></form>",
       "type" : "string",
       "format" : "email",
       "example" : "<script language=\"javascript\">alert('12')</script>",
