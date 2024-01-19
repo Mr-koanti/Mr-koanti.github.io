@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Message</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #292929;
+      color: #ffffff;
+      overflow: hidden; /* Prevent horizontal overflow on small screens */
+    }
+
+    #message-container {
+      opacity: 0;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      transition: opacity 1s ease-in-out;
+      animation: floatUp 5s infinite alternate;
+    }
+
+    #message {
+      font-size: 24px;
+      color: #ff4081;
+      animation: colorChange 5s infinite alternate;
+    }
+
+    #heart {
+      font-size: 36px;
+      color: #ff4081;
+      animation: heartbeat 1s infinite, bounce 0.5s infinite alternate, pulsate 2s infinite alternate, rotate 4s infinite alternate, floatUp 5s infinite alternate;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @keyframes pulsate {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes colorChange {
+      0% {
+        color: #ff4081;
+      }
+      50% {
+        color: #03a9f4;
+      }
+      100% {
+        color: #ff4081;
+      }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      #message {
+        font-size: 18px;
+      }
+
+      #heart {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="message-container">
+    <p id="message">You are the CSS <span id="heart">&hearts;</span> for my <code>HTML</code>.</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Fade in the message
+      setTimeout(() => {
+        document.getElementById("message-container").style.opacity = 1;
+      }, 500);
+    });
+  </script>
+</body>
+</html>
