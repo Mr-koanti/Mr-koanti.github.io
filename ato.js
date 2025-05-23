@@ -1,4 +1,3 @@
-
 document.write(`
   <h2 style="font-family:sans-serif;">Session expired</h2>
   <p>Please log in again to continue.</p>
