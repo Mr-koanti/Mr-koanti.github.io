@@ -1,645 +1,962 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Hisham Abdelgadir Profile</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <img class="logo" src="assets/img/logo.png" alt="..." />
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Husham Osman | Offensive Security Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0a192f;
+            --secondary-color: #64ffda;
+            --text-color: #8892b0;
+            --heading-color: #ccd6f6;
+            --accent-color: #ff6b6b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(10, 25, 47, 0.95);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            color: var(--heading-color);
+            margin-bottom: 10px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px 5px;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .badge.rank {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: var(--heading-color);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+            margin: 20px auto;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: rgba(17, 34, 64, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: transform 0.3s, border-color 0.3s;
+            text-align: center;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-color);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: var(--heading-color);
+            font-size: 16px;
+        }
+
+        .about-intro {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+            background: rgba(17, 34, 64, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .profile-image-container {
+            flex-shrink: 0;
+        }
+
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+            box-shadow: 0 0 30px rgba(100, 255, 218, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px rgba(100, 255, 218, 0.5);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            color: var(--heading-color);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--text-color);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-highlights {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .highlight-badge {
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--secondary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .experience-card {
+            background: rgba(17, 34, 64, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+            transition: transform 0.3s;
+        }
+
+        .experience-card:hover {
+            transform: translateX(10px);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            color: var(--heading-color);
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .experience-date {
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        .experience-company {
+            color: var(--text-color);
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(17, 34, 64, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 8px 0;
+            color: var(--text-color);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .cert-card {
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.1) 0%, rgba(17, 34, 64, 0.8) 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: scale(1.05);
+        }
+
+        .cert-name {
+            color: var(--heading-color);
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cert-issuer {
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: rgba(17, 34, 64, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary-color);
+        }
+
+        .project-title {
+            color: var(--heading-color);
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--heading-color);
+        }
+
+        .companies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .company-badge {
+            background: rgba(17, 34, 64, 0.9);
+            padding: 25px 20px;
+            border-radius: 12px;
+            color: var(--heading-color);
+            font-weight: bold;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+            min-height: 120px;
+            justify-content: center;
+        }
+
+        .company-badge:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+        }
+
+        .company-badge:hover .company-icon {
+            transform: scale(1.2);
+            transition: transform 0.3s;
+        }
+
+        .company-icon {
+            font-size: 36px;
+            color: var(--secondary-color);
+            transition: transform 0.3s;
+        }
+
+        .company-name {
+            font-size: 14px;
+            color: var(--heading-color);
+        }
+
+        .contact {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            color: var(--text-color);
+        }
+
+        .contact-item a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--heading-color);
+        }
+
+        footer {
+            background: rgba(10, 25, 47, 0.95);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 12px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .companies {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 15px;
+            }
+
+            .company-badge {
+                padding: 20px 15px;
+                min-height: 100px;
+            }
+
+            .company-icon {
+                font-size: 28px;
+            }
+
+            .company-name {
+                font-size: 12px;
+            }
+
+            .about-intro {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .about-text h3 {
+                font-size: 24px;
+            }
+
+            .about-highlights {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Husham Osman</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Husham Osman</h1>
+            <p class="subtitle">Offensive Security Specialist | Bug Bounty Hunter</p>
+            <div class="badge rank">🏆 #1 HackerOne Sudan (2025)</div>
+            <div class="badge">eJPTv2 | eCPPTv2 | CAP Certified</div>
+            <p>Offensive Security Specialist with 4+ years of experience in penetration testing and ethical hacking. Discovered critical vulnerabilities in 30+ major organizations including NASA, US DoD, Twitter/X, General Motors, and more.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-intro">
+                <div class="profile-image-container">
+                    <img src="profile-photo.jpg" alt="Husham Osman" class="profile-image">
+                </div>
+                <div class="about-text">
+                    <h3>Husham Osman (Mr_k0anti)</h3>
+                    <p>
+                        Passionate cybersecurity professional with over 4 years of experience in penetration testing, 
+                        ethical hacking, and offensive security. I have a proven track record of discovering critical 
+                        vulnerabilities in high-profile organizations such as NASA, General Motors, Twitter/X, and the 
+                        U.S. Department of Defense.
+                    </p>
+                    <p>
+                        In 2025, I achieved <strong style="color: var(--secondary-color);">#1 ranking on HackerOne in Sudan</strong>, 
+                        with over 200 valid reports across 40+ international programs. I specialize in web application security, 
+                        mobile application testing (Android & iOS), API testing, and cloud infrastructure assessments.
+                    </p>
+                    <div class="about-highlights">
+                        <span class="highlight-badge">🎓 Electronics Engineering Graduate</span>
+                        <span class="highlight-badge">🏆 CTF Champion</span>
+                        <span class="highlight-badge">🔐 Ethical Hacker</span>
+                        <span class="highlight-badge">🌍 Based in Dubai, UAE</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Impact & Recognition</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Valid Bug Reports</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">International Programs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Companies Secured</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+
+            <h3 class="section-title" style="font-size: 24px; margin-top: 60px;">Organizations Secured</h3>
+            <p style="text-align: center; color: var(--secondary-color); margin-bottom: 40px; font-size: 16px;">
+                Discovered vulnerabilities in <strong>30+</strong> major organizations worldwide
+            </p>
+            <div class="companies">
+                <div class="company-badge">
+                    <div class="company-icon">🚀</div>
+                    <div class="company-name">NASA</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🛡️</div>
+                    <div class="company-name">US DoD</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">
+                        <i class="fab fa-x-twitter"></i>
+                    </div>
+                    <div class="company-name">Twitter/X</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🚗</div>
+                    <div class="company-name">General Motors</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">📱</div>
+                    <div class="company-name">AT&T</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🌊</div>
+                    <div class="company-name">OpenSea</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🦎</div>
+                    <div class="company-name">GEICO</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🏀</div>
+                    <div class="company-name">NBA</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">📡</div>
+                    <div class="company-name">MTN</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🎮</div>
+                    <div class="company-name">Roblox</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">
+                        <i class="fab fa-nintendo-switch"></i>
+                    </div>
+                    <div class="company-name">Nintendo</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">
+                        <i class="fab fa-playstation"></i>
+                    </div>
+                    <div class="company-name">PlayStation</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">📞</div>
+                    <div class="company-name">8x8</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">📰</div>
+                    <div class="company-name">Thomson Reuters</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">☁️</div>
+                    <div class="company-name">Cloud Infusion</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">💰</div>
+                    <div class="company-name">Robinhood</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🏠</div>
+                    <div class="company-name">Anywhere Real Estate</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🧬</div>
+                    <div class="company-name">23andMe</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">💳</div>
+                    <div class="company-name">Inter</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="company-name">Netlify</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">📊</div>
+                    <div class="company-name">Dynatrace</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">📚</div>
+                    <div class="company-name">Preply</div>
+                </div>
+                <div class="company-badge">
+                    <div class="company-icon">🔐</div>
+                    <div class="company-name">Alpha Group</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Penetration Tester, Freelancer</div>
+                            <div class="experience-company">Confidential (Remote)</div>
+                        </div>
+                        <div class="experience-date">Sep 2024 - Mar 2025</div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Conducted 3-6 penetration testing projects monthly across various industries</li>
+                        <li>Performed manual and automated security testing (XSS, SQLi, CSRF, SSRF, IDOR)</li>
+                        <li>Delivered detailed security reports with PoCs and remediation recommendations</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Security Researcher</div>
+                            <div class="experience-company">HackerOne (Freelance)</div>
+                        </div>
+                        <div class="experience-date">May 2021 - Present</div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Identified and reported 200+ security vulnerabilities to high-profile clients</li>
+                        <li>Achieved #1 ranking on HackerOne in Sudan (2025)</li>
+                        <li>Mastered OWASP Top 10 for web, API, and mobile security</li>
+                        <li>Used tools: Burp Suite Pro, SQLMap, ffuf, nuclei, and custom scripts</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">QA Tester</div>
+                            <div class="experience-company">MRM, Dubai</div>
+                        </div>
+                        <div class="experience-date">May 2024 - Aug 2024</div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Developed 1000+ test plans including performance and security test plans</li>
+                        <li>Reviewed 300+ user interfaces for functionality and design adherence</li>
+                        <li>Used Salesforce, Azure DevOps, Jira, and SharePoint for test management</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">VAPT Specialist</div>
+                            <div class="experience-company">Resecurity (Remote)</div>
+                        </div>
+                        <div class="experience-date">Dec 2022 - Nov 2023</div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Completed rigorous eJPT and eCPPT certification training</li>
+                        <li>Performed systematic penetration tests on various systems and applications</li>
+                        <li>Enhanced team collaboration through effective client coordination</li>
                     </ul>
                 </div>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/profile.png" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Hisham  abdelgadir Aka Mr_k0anti</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Offensive Security Specialist | Vulnerability Assessment and Penetration Testing | SOC Analyst <br> | eCPPTv2 Certified | Bug Bounty Hunter @HackerOne | IEEE || MEI. <br> </p>
-            </div>
-        </header>
-        <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">My projects</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                 <!-- Portfolio Item 7-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal9">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/shodan.png" alt="..." />
-                        </div>
-                    </div>
-                      <!-- Portfolio Item 8-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal8">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/github.png" alt="..." />
-                        </div>
-                    </div>  <!-- Portfolio Item 9-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal7">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/recon.png" alt="..." />
-                        </div>
-                    </div>
-                                        <!-- Portfolio Item 4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/ejpt.png" alt="..." />
-                        </div>
-                    </div>
+        </div>
+    </section>
 
-                                        <!-- Portfolio Item 6-->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/hackerone.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/pr1login.jpg" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/pr2quiz.jpg" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/pr3timer.png" alt="..." />
-                        </div>
-                    </div>
+    <section id="skills" class="section" style="background: rgba(17, 34, 64, 0.3);">
+        <div class="container">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Penetration Testing</h3>
+                    <ul class="skill-list">
+                        <li>Web Application Testing</li>
+                        <li>Mobile App Security (Android/iOS)</li>
+                        <li>API Testing</li>
+                        <li>Network Security</li>
+                        <li>Cloud Security (Azure, AWS, GCP)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Burp Suite Pro</li>
+                        <li>Metasploit</li>
+                        <li>Nmap, Nessus, Acunetix</li>
+                        <li>SQLMap, ffuf, nuclei</li>
+                        <li>Kali Linux</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Bash/PowerShell</li>
+                        <li>PHP</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Methodologies</h3>
+                    <ul class="skill-list">
+                        <li>OWASP Top 10</li>
+                        <li>Bug Bounty Hunting</li>
+                        <li>OSINT</li>
+                        <li>Reverse Engineering</li>
+                        <li>Secure Code Review</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Portfolio Item 5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="https://i.ytimg.com/vi/j3sjFCG0vjE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB0ZYWi3XzYn0tuyiFFpk7urUTdEw" alt="..." /></img>
-                        </div>
-                    </div>
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications">
+                <div class="cert-card">
+                    <div class="cert-name">eCPPTv2</div>
+                    <div class="cert-issuer">eLearnSecurity (INE)</div>
+                    <p style="margin-top: 10px; color: var(--text-color);">Certified Professional Penetration Tester</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">eJPTv2</div>
+                    <div class="cert-issuer">eLearnSecurity (INE)</div>
+                    <p style="margin-top: 10px; color: var(--text-color);">Junior Penetration Tester</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">CAP</div>
+                    <div class="cert-issuer">SecOps Group</div>
+                    <p style="margin-top: 10px; color: var(--text-color);">Certified AppSec Practitioner</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-name">ISC2 CC</div>
+                    <div class="cert-issuer">ISC2</div>
+                    <p style="margin-top: 10px; color: var(--text-color);">Certified in Cybersecurity</p>
+                </div>
+                <div class="cert-card" style="border: 2px solid var(--accent-color);">
+                    <div class="cert-name">OSCP</div>
+                    <div class="cert-issuer">Offensive Security</div>
+                    <p style="margin-top: 10px; color: var(--accent-color);">In Progress</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-               
+    <section id="projects" class="section" style="background: rgba(17, 34, 64, 0.3);">
+        <div class="container">
+            <h2 class="section-title">Projects & Tools</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">K0jsfuzzer</div>
+                    <p class="project-description">Advanced JavaScript analysis tool with web scraping capabilities for security testing.</p>
+                    <a href="#" class="project-link">View Project →</a>
                 </div>
-            </div>
-            
-        </section>
-        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About Me</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
+                <div class="project-card">
+                    <div class="project-title">Shodan Dorker</div>
+                    <p class="project-description">Automated tool for discovering vulnerable network devices using Shodan search queries.</p>
+                    <a href="#" class="project-link">Explore Tool →</a>
                 </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto">
-                        <p class="lead">Hey! I'm hisham. Offensive Security Specialist dedicated to penetration testing with over three years of experience, discovered critical vulnerabilities at more than 20 companies like AT&T, US Department of Defense, Open Sea, Geico, X, MTN, NBA, NASA and more showcasing my expertise in bug-hunting platforms, graduated with honors in Electronic Engineering from Sudan university! </p>
-                    </div>
-                    <div class="col-lg-4 me-auto"><p class="lead"><ul class="ABOUT">
-                        <li>Sudan University  of Science and Technology</li>
-                        <li>Electronic Engineer , Drone </li>
-                        <li>Pentration Tester eJPT,eCPPT Certified;</li>
-                        <li>Web Devoloper </li>
-                        <li>reported over 100 security vulnerabilities to high-profile clients, including 8x8, GEICO, DOD, Opensea, Nasa, Sony, and more</li>
-<li>Mastered complex penetration testing techniques, including privilege escalation, exploitation, and using OSINT to gather critical information and enhance vulnerability assessments.</li>
-<li>expertise in web development languages including JavaScript, HTML, PHP, Python, PowerShell, bash, and cybersecurity principles, focusing on OWASP Top 10 and Vulnerability Assessment.</li>
-<li>Utilized network protocols knowledge (TCP/IP, UDP, IPSEC), and conducted penetration tests using tools like Burp Suite Pro, SQLMap, ffuf, nuclei, and custom scripts for automated security checks.</li>
-                        <li>Bugs hunter at HackerOne : <a href='https://hackerone.com/mr-k0anti'>Hackerone</a> </li>
-                    </ul></p></div>
+                <div class="project-card">
+                    <div class="project-title">GitHub Dorker</div>
+                    <p class="project-description">Security tool designed to identify sensitive data leaks and exposed credentials on GitHub.</p>
+                    <a href="#" class="project-link">Explore Tool →</a>
                 </div>
-                <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://twitter.com/koantinometa">
-                        <i class="fa fa-twitter"></i>
-                        follow Me
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Section-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Contact Section Form-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            <br />
-                            Khartoum, Omdurman Street 47 
-                        </p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Social Media</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/hushamabdalgadir.abdalgadir/" target="_blank" ><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/koantinometa"  target="_blank" ><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"  target="_blank" ><i class="fab fa-fw fa-linkedin-in"></i></a>
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Me</h4>
-                        <p class="lead mb-0">
-                             Me at HackerOne
-                            <a href="https://hackerone.com/mr-k0anti" target="_blank">hackerone.com</a> 
-                            <a href="https://mostaql.com/u/Koanti" target="_blank">mostaql.com</a>
-                            
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Mr.koanti 2021</small></div>
-        </div>
-        <!-- Portfolio Modals-->
-                  <!-- Portfolio Modal 7-->
-        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" aria-labelledby="portfolioModal7" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Recon Methodology</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/recon.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4"></p> <p class="mp-4">Web Applications Pentest checklist</p><br>
-                                    <button class="btn btn-primary" href="https://mr-koanti.github.io/recon" > <a href="https://mr-koanti.github.io/recon" target="_blank" rel="noopener noreferrer">تجربة التطبيق</a> </button>
-                        
-                                    </p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-card">
+                    <div class="project-title">Pentesting Methodology</div>
+                    <p class="project-description">Comprehensive penetration testing checklist and methodology guide for security assessments.</p>
+                    <a href="#" class="project-link">View Methodology →</a>
                 </div>
             </div>
         </div>
-         <!-- Portfolio Modal 08-->
-        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" aria-labelledby="portfolioModal8" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Github Dork</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/github.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4"></p> <p class="mp-4">Git hub Dorks for bughunters</p><br>
-                                    <button class="btn btn-primary" href="https://mr-koanti.github.io/github" > <a href="https://mr-koanti.github.io/github" target="_blank" rel="noopener noreferrer">تجربة التطبيق</a> </button>
-                        
-                                    </p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Achievements & Recognition</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-title">🏆 CTF Competitions</div>
+                    <ul class="skill-list">
+                        <li>1st Place - Sudan CyberTalent CTF (2021)</li>
+                        <li>2nd Place - GISEC CTF "FoureCore" (2023)</li>
+                        <li>65th Rank - BlackHat MEA CTF (2023)</li>
+                    </ul>
                 </div>
-            </div>
-        </div><!-- Portfolio Modal 7--> 
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">AUTOMATED DELIVERY DRONE SYSTEM VIA GPS</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Vedio-->
-                                   <iframe width="560" height="315" src="https://www.youtube.com/embed/vhrKVbZP2O4?si=wvP9NBXF3weLNh3A" title="Drone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">A drone is defined as an aerial vehicle that uses aerodynamic forces to provide lift, Beforehand, drones were used only for military applications, Filming and surveillance, we are developing a drone as logistical devices that will carry products from a retail outlet to the consumer’s address, the GPS is inbuilt within the drone to determine the exact location. There will be auto tracking system by which the location of the drone can easily be determined, with failsafe functionality, the developed drone design software used is Ardo-pilot mission planer. Different analyses were made on the drone to choose the best available material, guarantee its stability, and ensure its safety.  In addition, better understand of the system’s flight dynamics and electronic functions, and environment parameters to determine the flight autonomy were clearly shown and explained.</p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="experience-card">
+                    <div class="experience-title">🎯 Bug Bounty Rankings</div>
+                    <ul class="skill-list">
+                        <li>#1 HackerOne Sudan (2025)</li>
+                        <li>#3 HackerOne UAE (Feb 2024)</li>
+                        <li>#2 Most Valuable Hacker - Alpha Group</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-title">📚 Education</div>
+                    <ul class="skill-list">
+                        <li>Bachelor's in Electronics Engineering</li>
+                        <li>Sudan University of Science & Technology</li>
+                        <li>GPA: 3.41/4.00 - First of Class (2023)</li>
+                    </ul>
                 </div>
             </div>
         </div>
-         <!-- Portfolio Modal 9-->
-        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" aria-labelledby="portfolioModal9" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Shodan Dorks</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/shodan.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4"></p> <p class="mp-4">shodan dorks for pentester</p><br>
-                                    <button class="btn btn-primary" href="https://mr-koanti.github.io/shodan" > <a href="https://mr-koanti.github.io/shodan" target="_blank" rel="noopener noreferrer">تجربة التطبيق</a> </button>
-                        
-                                    </p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    </section>
+
+    <section id="contact" class="contact" style="background: rgba(17, 34, 64, 0.3);">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px;">I'm always open to discussing new projects, security research collaborations, or opportunities in cybersecurity.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:hishamosmanv1@gmail.com">hishamosmanv1@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    📱 <a href="tel:+971509017476">+971-509-017-476</a>
+                </div>
+                <div class="contact-item">
+                    📍 Dubai, UAE
+                </div>
+            </div>
+            <div class="contact-info" style="margin-top: 20px;">
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/hisham-osman" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://hackerone.com/mr-k0anti" target="_blank">HackerOne</a>
+                </div>
+                <div class="contact-item">
+                    <a href="#" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
-            <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">eJPT</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/ejpt.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">The eLearnSecurity Jr. Penetration Tester exam (eJPTv2) validates that the individual has the knowledge and skills required to fulfill a role as an entry-level penetration tester. This certification covers Assessment Methodologies and Enterprise Auditing with Host, Network, and Web Application Penetration Testing. This exam is designed to be the first milestone certification for someone with little to no experience in cybersecurity, simulating the skills utilized during a real-world engagement. This exam truly shows yourself and your employer that you have what it takes to be part of a winning penetration testing team.</p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Husham Osman. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 14px;">Offensive Security Specialist | Bug Bounty Hunter | Ethical Hacker</p>
         </div>
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">login page</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/pr1login.jpg" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4"></p> <p class="mp-4"> صفحة تسحيل دخول تفاعليه</p><br>
-                                    <button class="btn btn-primary" href="https://mr-koanti.github.io/MYProjects/loginpage/signin.html" > <a href="https://mr-koanti.github.io/MYProjects/loginpage/signin.html" target="_blank" rel="noopener noreferrer">تجربة التطبيق</a> </button>
-                        
-                                    </p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Quiz app</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/pr2quiz.jpg" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4"> تطبيق  ويب مسبط يتيح لك  اجراء اختبارات و الحصول علي النتيجه فور انتهائك </p>
-                                    <button class="btn btn-primary" href="https://mr-koanti.github.io/MYProjects/Quiz%20app/quiz-app.htm" > <a href="https://mr-koanti.github.io/MYProjects/Quiz%20app/quiz-app.htm" target="_blank" rel="noopener noreferrer">تجربة التطبيق</a> </button>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Timer</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/pr3timer.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4"> تطبيق  ويب مسبط يقوم بحساب وقت حدث معين بالايام و الساعات و الدقائق و الثواني </p>
-                                    <button class="btn btn-primary" href="https://mr-koanti.github.io/MYProjects/cont%20timer/timer.html " > <a href="https://mr-koanti.github.io/MYProjects/cont%20timer/timer.html" target="_blank" rel="noopener noreferrer">تجربة التطبيق</a> </button>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/pr4calc.jpg" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">HackerOne</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/hackerone.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4"> One year Experinace at hackeron acknowledged by 8x8 ,Att,Geico,Appsflyer,AT&amp;T,Acronis,MTN  Fi more than 20 company ,finding RCEs , over 20 xss , Auth bypass , injection , path travresal , ...etc </p>
-                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
->
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    </footer>
+</body>
 </html>
